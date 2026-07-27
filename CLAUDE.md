@@ -428,4 +428,24 @@ contacto.html  → Contacto | Odin Tech
 
 ---
 
+## 13. Deploy
+
+**Repo:** https://github.com/jaimemoreirar/odin-tech-web (público)
+**VPS ruta clone:** `/opt/odin-tech-web`
+**VPS ruta sitio:** `/home/odin-erp/public_html`
+
+### Flujo de trabajo
+
+1. Hacer cambios en los archivos locales
+2. **Siempre hacer commit + push** antes de indicar deploy
+3. Entregar al usuario el comando de deploy para ejecutar en el VPS
+
+### Comando de deploy (ejecutar en el VPS)
+
+```bash
+cd /opt/odin-tech-web && git pull && rsync -av --delete /opt/odin-tech-web/ /home/odin-erp/public_html/ && chown -R odin-erp:odin-erp /home/odin-erp/public_html/
+```
+
+---
+
 *Este archivo es la fuente de verdad del proyecto. Ante cualquier duda de implementación, prevalece lo definido aquí.*
