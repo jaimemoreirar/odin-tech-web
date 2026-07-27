@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novedades | Odin Tech</title>
+  <meta name="description" content="Novedades, ideas y artículos de Odin Tech. Tecnología explicada en simple para pymes, emprendedores y familias en Chile.">
+  <meta name="author" content="Odin Tech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://odin-erp.cl/novedades.html">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Novedades | Odin Tech">
+  <meta property="og:description" content="Tecnología explicada en simple para pymes, emprendedores y familias.">
+  <meta property="og:image"       content="https://odin-erp.cl/assets/img/og-image.jpg">
+  <meta property="og:url"         content="https://odin-erp.cl/novedades.html">
+  <meta property="og:locale"      content="es_CL">
+  <link rel="icon" href="original_2.ico">
+  <link rel="apple-touch-icon"    href="/assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+  <div class="page-loader" id="page-loader" aria-hidden="true"><div class="page-loader__spinner"></div></div>
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-animate" aria-label="Navegación principal">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Odin Tech — inicio">
+          <img src="original_png.png" alt="Odin Tech" width="120" height="40">
+        </a>
+        <ul class="navbar__nav" role="list">
+          <li><a href="nosotros.html"  class="navbar__link">Nosotros</a></li>
+          <li><a href="productos.html" class="navbar__link">Productos</a></li>
+          <li><a href="servicios.html" class="navbar__link">Servicios</a></li>
+          <li><a href="cursos.html"    class="navbar__link">Cursos</a></li>
+          <li><a href="novedades.html" class="navbar__link active">Novedades</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <a href="cotizador.html" class="btn btn-primary btn-sm">Cotizar</a>
+          <button class="navbar__hamburger" id="nav-hamburger" aria-expanded="false" aria-controls="nav-mobile-menu" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="navbar__overlay" id="nav-overlay" aria-hidden="true"></div>
+    <div class="navbar__mobile-menu" id="nav-mobile-menu" role="dialog" aria-label="Menú de navegación">
+      <ul role="list">
+        <li><a href="nosotros.html"  class="navbar__link">Nosotros</a></li>
+        <li><a href="productos.html" class="navbar__link">Productos</a></li>
+        <li><a href="servicios.html" class="navbar__link">Servicios</a></li>
+        <li><a href="cursos.html"    class="navbar__link">Cursos</a></li>
+        <li><a href="novedades.html" class="navbar__link active">Novedades</a></li>
+      </ul>
+      <a href="cotizador.html" class="btn btn-primary" style="margin-top:auto;">Cotizar</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <div class="container page-hero__content">
+        <span class="page-hero__label">// Blog y novedades</span>
+        <h1 class="page-hero__title">Cosas que <span class="text-gradient">aprendemos</span><br>en el camino</h1>
+        <p class="page-hero__subtitle">Artículos sobre tecnología para pymes y personas, novedades de nuestros productos y algunas reflexiones del proceso de construir Odin Tech.</p>
+      </div>
+    </section>
+
+    <!-- ARTÍCULO DESTACADO -->
+    <section class="section--sm" aria-labelledby="destacado-title">
+      <div class="container">
+        <span class="section-label">Artículo destacado</span>
+        <article class="card reveal article-featured" aria-labelledby="destacado-title" style="cursor:pointer;" onclick="location.href='articulo-por-que-odin-tech.html'">
+          <div style="background:linear-gradient(135deg,var(--color-primary),var(--color-secondary),var(--color-grad-3)); display:flex; align-items:center; justify-content:center; min-height:320px; position:relative; overflow:hidden;">
+            <i data-lucide="heart-handshake" width="96" height="96" style="color:rgba(255,255,255,0.2);"></i>
+            <div style="position:absolute; bottom:var(--space-4); left:var(--space-6);">
+              <span class="badge badge-brand">Novedades</span>
+            </div>
+          </div>
+          <div style="padding:var(--space-10);">
+            <div style="display:flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-4);">
+              <span class="font-mono" style="font-size:var(--text-xs); color:var(--color-text-muted);">abr 2026</span>
+              <span style="color:var(--color-border);">·</span>
+              <span style="font-size:var(--text-xs); color:var(--color-text-muted);">4 min de lectura</span>
+            </div>
+            <h2 class="card__title" id="destacado-title" style="font-size:var(--text-2xl); margin-bottom:var(--space-4);">
+              Por qué creamos Odin Tech — y qué queremos lograr
+            </h2>
+            <p style="color:var(--color-text-muted); font-size:var(--text-sm); line-height:1.8; margin-bottom:var(--space-6);">
+              Empezó como un proyecto para ordenar un negocio pequeño. Terminó siendo algo más grande. Acá cuento cómo fue el proceso y para dónde vamos.
+            </p>
+            <div style="display:flex; align-items:center; gap:var(--space-4);">
+              <div style="width:36px; height:36px; border-radius:50%; background:var(--gradient-brand); display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:700; font-size:var(--text-xs); color:white;">J</div>
+              <div>
+                <div style="font-family:var(--font-display); font-size:var(--text-sm); font-weight:600;">Jaime</div>
+                <div style="font-size:var(--text-xs); color:var(--color-text-muted);">Fundador, Odin Tech</div>
+              </div>
+              <a href="articulo-por-que-odin-tech.html" class="btn btn-primary btn-sm" style="margin-left:auto;" onclick="event.stopPropagation()">Leer artículo →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- GRID DE ARTÍCULOS + SIDEBAR -->
+    <section class="section" aria-labelledby="articulos-title">
+      <div class="container">
+        <div class="novedades-layout">
+
+          <!-- Artículos -->
+          <div>
+            <h2 class="section-title" id="articulos-title" style="margin-bottom:var(--space-8);">
+              Todos los <span class="text-gradient">artículos</span>
+            </h2>
+
+            <div class="articles-grid">
+
+              <article class="card card--article reveal" style="cursor:pointer;" onclick="location.href='articulo-ciberseguridad-pymes.html'">
+                <div style="aspect-ratio:16/9; background:linear-gradient(135deg,#1A1A2E,var(--color-primary)); display:flex; align-items:center; justify-content:center;">
+                  <i data-lucide="shield-check" width="40" height="40" style="color:rgba(0,229,255,0.5);"></i>
+                </div>
+                <div class="card__body">
+                  <div style="display:flex; gap:var(--space-2); margin-bottom:var(--space-3); flex-wrap:wrap;">
+                    <span class="badge badge-cyan">Seguridad digital</span>
+                    <span class="card__date">jun 2026</span>
+                  </div>
+                  <h3 style="font-size:var(--text-md); margin-bottom:var(--space-2);">Te van a intentar robar por internet. Esto es cómo lo hacen.</h3>
+                  <p class="card__text">Los ataques digitales más comunes no requieren tecnología sofisticada. Requieren que tú no sepas cómo funcionan. Acá lo explicamos.</p>
+                </div>
+              </article>
+
+              <article class="card card--article reveal" style="cursor:pointer;" onclick="location.href='articulo-senales-excel.html'">
+                <div style="aspect-ratio:16/9; background:linear-gradient(135deg,var(--color-primary),var(--color-secondary)); display:flex; align-items:center; justify-content:center;">
+                  <i data-lucide="layout-dashboard" width="40" height="40" style="color:rgba(255,255,255,0.4);"></i>
+                </div>
+                <div class="card__body">
+                  <div style="display:flex; gap:var(--space-2); margin-bottom:var(--space-3); flex-wrap:wrap;">
+                    <span class="badge badge-cyan">Odin ERP</span>
+                    <span class="card__date">ene 2026</span>
+                  </div>
+                  <h3 style="font-size:var(--text-md); margin-bottom:var(--space-2);">5 señales de que tu negocio necesita algo mejor que Excel</h3>
+                  <p class="card__text">No es crítica al Excel — es que hay cosas para las que ya no alcanza. Acá van cinco señales concretas que me encuentro seguido.</p>
+                </div>
+              </article>
+
+              <article class="card card--article reveal">
+                <div style="aspect-ratio:16/9; background:linear-gradient(135deg,var(--color-secondary),var(--color-grad-3)); display:flex; align-items:center; justify-content:center;">
+                  <i data-lucide="globe" width="40" height="40" style="color:rgba(255,255,255,0.4);"></i>
+                </div>
+                <div class="card__body">
+                  <div style="display:flex; gap:var(--space-2); margin-bottom:var(--space-3); flex-wrap:wrap;">
+                    <span class="badge badge-brand">Páginas web</span>
+                    <span class="card__date">ene 2026</span>
+                  </div>
+                  <h3 style="font-size:var(--text-md); margin-bottom:var(--space-2);">Mi negocio funciona, ¿para qué necesito una página web?</h3>
+                  <p class="card__text">Me lo preguntan seguido. La respuesta corta: porque la gente te busca en internet antes de llamarte, y si no apareces, no existís.</p>
+                </div>
+              </article>
+
+              <article class="card card--article reveal" style="cursor:pointer;" onclick="location.href='articulo-odin-runa.html'">
+                <div style="aspect-ratio:16/9; background:linear-gradient(135deg,var(--color-grad-3),var(--color-grad-4)); display:flex; align-items:center; justify-content:center;">
+                  <i data-lucide="message-square-heart" width="40" height="40" style="color:rgba(255,255,255,0.4);"></i>
+                </div>
+                <div class="card__body">
+                  <div style="display:flex; gap:var(--space-2); margin-bottom:var(--space-3); flex-wrap:wrap;">
+                    <span class="badge badge-warning">Odin Runa</span>
+                    <span class="card__date">feb 2026</span>
+                  </div>
+                  <h3 style="font-size:var(--text-md); margin-bottom:var(--space-2);">Odin Runa: qué es, para qué sirve y de dónde salió la idea</h3>
+                  <p class="card__text">No es magia ni inteligencia artificial de película. Es analizar texto y mostrar patrones. Acá lo explico sin tecnicismos.</p>
+                </div>
+              </article>
+
+              <article class="card card--article reveal">
+                <div style="aspect-ratio:16/9; background:linear-gradient(135deg,var(--color-primary),var(--color-grad-3)); display:flex; align-items:center; justify-content:center;">
+                  <i data-lucide="smartphone" width="40" height="40" style="color:rgba(255,255,255,0.4);"></i>
+                </div>
+                <div class="card__body">
+                  <div style="display:flex; gap:var(--space-2); margin-bottom:var(--space-3); flex-wrap:wrap;">
+                    <span class="badge badge-purple">Apps a medida</span>
+                    <span class="card__date">feb 2026</span>
+                  </div>
+                  <h3 style="font-size:var(--text-md); margin-bottom:var(--space-2);">¿Cuándo tiene sentido hacerse una app? Siendo honestos</h3>
+                  <p class="card__text">Muchas veces la respuesta es "todavía no". Pero hay momentos en que sí tiene mucho sentido. Acá intento ayudarte a distinguir uno del otro.</p>
+                </div>
+              </article>
+
+              <article class="card card--article reveal">
+                <div style="aspect-ratio:16/9; background:linear-gradient(135deg,#1A1A2E,var(--color-secondary)); display:flex; align-items:center; justify-content:center;">
+                  <i data-lucide="package" width="40" height="40" style="color:rgba(0,229,255,0.5);"></i>
+                </div>
+                <div class="card__body">
+                  <div style="display:flex; gap:var(--space-2); margin-bottom:var(--space-3); flex-wrap:wrap;">
+                    <span class="badge badge-cyan">Odin ERP</span>
+                    <span class="card__date">mar 2026</span>
+                  </div>
+                  <h3 style="font-size:var(--text-md); margin-bottom:var(--space-2);">El inventario siempre es un caos hasta que no lo es</h3>
+                  <p class="card__text">No es un problema de disciplina, es un problema de herramienta. Cuándo y cómo ordenarlo de una vez.</p>
+                </div>
+              </article>
+
+              <article class="card card--article reveal">
+                <div style="aspect-ratio:16/9; background:linear-gradient(135deg,var(--color-grad-4),var(--color-grad-5)); display:flex; align-items:center; justify-content:center;">
+                  <i data-lucide="store" width="40" height="40" style="color:rgba(26,26,46,0.4);"></i>
+                </div>
+                <div class="card__body">
+                  <div style="display:flex; gap:var(--space-2); margin-bottom:var(--space-3); flex-wrap:wrap;">
+                    <span class="badge badge-brand">Para pymes</span>
+                    <span class="card__date">mar 2026</span>
+                  </div>
+                  <h3 style="font-size:var(--text-md); margin-bottom:var(--space-2);">Digitalizar un negocio pequeño no tiene por qué ser caro ni complicado</h3>
+                  <p class="card__text">Hay una idea instalada de que la tecnología es para empresas con presupuesto. No tiene por qué ser así, y acá trato de demostrarlo.</p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- SIDEBAR -->
+          <aside aria-label="Sidebar del blog">
+
+            <!-- Categorías -->
+            <div class="card" style="margin-bottom:var(--space-6);">
+              <h3 style="font-family:var(--font-display); font-size:var(--text-sm); font-weight:600; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:var(--space-5);">Categorías</h3>
+              <ul style="display:flex; flex-direction:column; gap:var(--space-3);">
+                <li>
+                  <a href="#" style="font-size:var(--text-sm); color:var(--color-text-muted); transition:color var(--transition-fast);" onmouseover="this.style.color='var(--color-text)'" onmouseout="this.style.color='var(--color-text-muted)'">Odin ERP</a>
+                </li>
+                <li>
+                  <a href="#" style="font-size:var(--text-sm); color:var(--color-text-muted); transition:color var(--transition-fast);" onmouseover="this.style.color='var(--color-text)'" onmouseout="this.style.color='var(--color-text-muted)'">Odin Runa</a>
+                </li>
+                <li>
+                  <a href="#" style="font-size:var(--text-sm); color:var(--color-text-muted); transition:color var(--transition-fast);" onmouseover="this.style.color='var(--color-text)'" onmouseout="this.style.color='var(--color-text-muted)'">Para pymes</a>
+                </li>
+                <li>
+                  <a href="#" style="font-size:var(--text-sm); color:var(--color-text-muted); transition:color var(--transition-fast);" onmouseover="this.style.color='var(--color-text)'" onmouseout="this.style.color='var(--color-text-muted)'">Para personas y familias</a>
+                </li>
+                <li>
+                  <a href="#" style="font-size:var(--text-sm); color:var(--color-text-muted); transition:color var(--transition-fast);" onmouseover="this.style.color='var(--color-text)'" onmouseout="this.style.color='var(--color-text-muted)'">Novedades</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Artículos recientes -->
+            <div class="card" style="margin-bottom:var(--space-6);">
+              <h3 style="font-family:var(--font-display); font-size:var(--text-sm); font-weight:600; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:var(--space-5);">Recientes</h3>
+              <ul style="display:flex; flex-direction:column; gap:var(--space-4);">
+                <li style="border-bottom:1px solid var(--color-border); padding-bottom:var(--space-4);">
+                  <a href="articulo-ciberseguridad-pymes.html" style="font-size:var(--text-sm); color:var(--color-text-muted); line-height:1.5; display:block; transition:color var(--transition-fast);" onmouseover="this.style.color='var(--color-text)'" onmouseout="this.style.color='var(--color-text-muted)'">Te van a intentar robar por internet. Esto es cómo lo hacen.</a>
+                  <span class="font-mono" style="font-size:var(--text-xs); color:rgba(158,158,158,0.5); display:block; margin-top:4px;">jun 2026</span>
+                </li>
+                <li style="border-bottom:1px solid var(--color-border); padding-bottom:var(--space-4);">
+                  <a href="articulo-por-que-odin-tech.html" style="font-size:var(--text-sm); color:var(--color-text-muted); line-height:1.5; display:block; transition:color var(--transition-fast);" onmouseover="this.style.color='var(--color-text)'" onmouseout="this.style.color='var(--color-text-muted)'">Por qué creamos Odin Tech</a>
+                  <span class="font-mono" style="font-size:var(--text-xs); color:rgba(158,158,158,0.5); display:block; margin-top:4px;">abr 2026</span>
+                </li>
+                <li>
+                  <a href="articulo-senales-excel.html" style="font-size:var(--text-sm); color:var(--color-text-muted); line-height:1.5; display:block; transition:color var(--transition-fast);" onmouseover="this.style.color='var(--color-text)'" onmouseout="this.style.color='var(--color-text-muted)'">5 señales de que tu negocio necesita algo mejor que Excel</a>
+                  <span class="font-mono" style="font-size:var(--text-xs); color:rgba(158,158,158,0.5); display:block; margin-top:4px;">ene 2026</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="card" style="background:linear-gradient(135deg,rgba(106,27,154,0.2),rgba(194,24,91,0.15));">
+              <h3 style="font-family:var(--font-display); font-size:var(--text-md); font-weight:700; margin-bottom:var(--space-2);">Mantente al día</h3>
+              <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-bottom:var(--space-5);">Novedades de Odin Tech directo en tu correo. Sin spam, sin tecnicismos.</p>
+              <form class="form" id="newsletter-form" aria-label="Suscripción al newsletter" novalidate>
+                <div class="form-field">
+                  <label for="newsletter-email" class="sr-only">Correo electrónico</label>
+                  <input type="email" id="newsletter-email" name="email" class="form-control" placeholder="tu@correo.com" autocomplete="email" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Suscribirme</button>
+                <div class="form-feedback" id="newsletter-feedback" role="alert"></div>
+              </form>
+            </div>
+
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="original_png.png" alt="Odin Tech" width="100" height="34">
+          <p>Tecnología que piensa contigo. Hacemos páginas web, aplicaciones a medida y software de gestión para pymes, emprendedores y familias en Chile.</p>
+          <div class="footer__social" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/odin_tech_ti" aria-label="Instagram" target="_blank" rel="noopener"><i data-lucide="instagram" width="16" height="16"></i></a><a href="https://www.tiktok.com/@odin_tech_ti" aria-label="TikTok" target="_blank" rel="noopener"><i data-lucide="tiktok" width="16" height="16"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Empresa</h4>
+          <ul class="footer__links">
+            <li><a href="nosotros.html">Quiénes somos</a></li>
+            <li><a href="novedades.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Productos</h4>
+          <ul class="footer__links">
+            <li><a href="productos.html">Odin ERP</a></li>
+            <li><a href="productos.html">Odin Runa</a></li>
+            <li><a href="productos.html#forseti">Odin Forseti <span style="font-size:0.7em; opacity:0.6;">· pronto</span></a></li>
+            <li><a href="productos.html#frigg">Odin Frigg <span style="font-size:0.7em; opacity:0.6;">· pronto</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <div class="footer__contact-item"><i data-lucide="mail" width="14" height="14"></i><span>admin@odin-erp.cl</span></div>
+          <div class="footer__contact-item"><i data-lucide="phone" width="14" height="14"></i><a href="https://wa.me/56936445396" target="_blank" rel="noopener">+56 9 3644 5396</a></div>
+          <div class="footer__contact-item"><i data-lucide="map-pin" width="14" height="14"></i><span>Chile</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">© 2026 Odin Tech · Todos los derechos reservados</p>
+        <p class="footer__legal">Hecho en Chile 🇨🇱</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="whatsapp-float">
+    <span class="whatsapp-float__tooltip">¿Necesitas ayuda?</span>
+    <a href="https://wa.me/56936445396" class="whatsapp-float__btn" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
+      <i data-lucide="message-circle" width="22" height="22"></i>
+    </a>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+</body>
+</html>

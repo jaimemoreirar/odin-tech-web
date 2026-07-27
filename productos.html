@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos | Odin ERP, Odin Runa, Odin Forseti y Odin Frigg | Odin Tech</title>
+  <meta name="description" content="Software propio de Odin Tech: Odin ERP para pymes, Odin Runa para análisis de conversaciones, y próximamente Odin Forseti y Odin Frigg para el hogar inteligente.">
+  <meta name="author" content="Odin Tech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://odin-erp.cl/productos.html">
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Productos | Odin Tech">
+  <meta property="og:description" content="Software propio para pymes y personas: Odin ERP y Odin Runa.">
+  <meta property="og:image"       content="https://odin-erp.cl/assets/img/og-image.jpg">
+  <meta property="og:url"         content="https://odin-erp.cl/productos.html">
+  <meta property="og:locale"      content="es_CL">
+  <link rel="icon" href="original_2.ico">
+  <link rel="apple-touch-icon"    href="/assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+  <div class="page-loader" id="page-loader" aria-hidden="true"><div class="page-loader__spinner"></div></div>
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-animate" aria-label="Navegación principal">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Odin Tech — inicio">
+          <img src="original_png.png" alt="Odin Tech" width="120" height="40">
+        </a>
+        <ul class="navbar__nav" role="list">
+          <li><a href="nosotros.html"  class="navbar__link">Nosotros</a></li>
+          <li><a href="productos.html" class="navbar__link active">Productos</a></li>
+          <li><a href="servicios.html" class="navbar__link">Servicios</a></li>
+          <li><a href="cursos.html"    class="navbar__link">Cursos</a></li>
+          <li><a href="novedades.html" class="navbar__link">Novedades</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <a href="cotizador.html" class="btn btn-primary btn-sm">Cotizar</a>
+          <button class="navbar__hamburger" id="nav-hamburger" aria-expanded="false" aria-controls="nav-mobile-menu" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="navbar__overlay" id="nav-overlay" aria-hidden="true"></div>
+    <div class="navbar__mobile-menu" id="nav-mobile-menu" role="dialog" aria-label="Menú de navegación">
+      <ul role="list">
+        <li><a href="nosotros.html"  class="navbar__link">Nosotros</a></li>
+        <li><a href="productos.html" class="navbar__link active">Productos</a></li>
+        <li><a href="servicios.html" class="navbar__link">Servicios</a></li>
+        <li><a href="cursos.html"    class="navbar__link">Cursos</a></li>
+        <li><a href="novedades.html" class="navbar__link">Novedades</a></li>
+      </ul>
+      <a href="cotizador.html" class="btn btn-primary" style="margin-top:auto;">Cotizar</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO INTERNO -->
+    <section class="page-hero">
+      <div class="container page-hero__content">
+        <span class="page-hero__label">// Nuestros productos</span>
+        <h1 class="page-hero__title">
+          Software que <span class="text-gradient">trabaja</span><br>para ti
+        </h1>
+        <p class="page-hero__subtitle">
+          Herramientas propias pensadas para que cualquier persona pueda usarlas sin complicaciones, aunque no sepa nada de tecnología.
+        </p>
+      </div>
+    </section>
+
+    <!-- CATÁLOGO -->
+    <section class="section" aria-labelledby="catalogo-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Catálogo</span>
+          <h2 class="section-title" id="catalogo-title">Nuestros <span class="text-gradient">productos</span></h2>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filter-tabs" role="tablist" aria-label="Filtrar por categoría">
+          <button class="filter-tab active" data-filter="todos"  role="tab" aria-selected="true">Todos</button>
+          <button class="filter-tab"        data-filter="erp"    role="tab" aria-selected="false">ERP</button>
+          <button class="filter-tab"        data-filter="nlp"    role="tab" aria-selected="false">NLP</button>
+          <button class="filter-tab"        data-filter="hogar"  role="tab" aria-selected="false">Hogar</button>
+          <button class="filter-tab"        data-filter="ia"     role="tab" aria-selected="false">IA</button>
+        </div>
+
+        <!-- Grid de productos -->
+        <div class="grid-2" id="productos-grid" style="max-width:960px; margin:0 auto;">
+
+          <!-- Odin ERP -->
+          <div class="card reveal" data-category="erp">
+            <div class="card__icon">
+              <i data-lucide="layout-dashboard" width="24" height="24"></i>
+            </div>
+            <div style="display:flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-4);">
+              <span class="badge badge-cyan">Disponible</span>
+              <span class="badge badge-purple">ERP</span>
+            </div>
+            <h3 class="card__title">Odin ERP</h3>
+            <p class="card__text">Ordena tu negocio en un solo lugar: ventas, inventario, pedidos y reportes. Incluye punto de venta (POS) para atender en tu local. Sin planillas de Excel dispersas, sin información perdida. Lo ves todo en tiempo real desde donde estés.</p>
+            <ul style="margin-top:var(--space-4); display:flex; flex-direction:column; gap:var(--space-2);">
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Punto de venta (POS) integrado para tu local
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Control de ventas e inventario en tiempo real
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Gestión de pedidos y despachos
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Reportes y estadísticas de tu negocio
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Acceso desde cualquier dispositivo
+              </li>
+            </ul>
+            <a href="contacto.html" class="btn btn-primary btn-sm" style="margin-top:var(--space-6);">Pedir una demo</a>
+          </div>
+
+          <!-- Odin Runa -->
+          <div class="card reveal" data-category="nlp ia" style="display:flex; flex-direction:column;">
+            <div class="card__icon">
+              <i data-lucide="message-square-heart" width="24" height="24"></i>
+            </div>
+            <div style="display:flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-4); flex-wrap:wrap;">
+              <span class="badge badge-cyan">Disponible</span>
+              <span class="badge badge-purple">NLP</span>
+              <span class="badge badge-cyan">IA</span>
+            </div>
+            <h3 class="card__title">Odin Runa</h3>
+            <p class="card__text">¿Alguna vez quisiste entender mejor cómo te comunicas? Odin Runa analiza tus conversaciones de WhatsApp y te muestra patrones que no habías notado: emociones, temas frecuentes, quién toma la iniciativa y más.</p>
+            <ul style="margin-top:var(--space-4); display:flex; flex-direction:column; gap:var(--space-2);">
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Análisis de emociones y sentimientos
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Temas más hablados en tus chats
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Indicadores de iniciativa y reciprocidad
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Solo necesitas tu archivo exportado de WhatsApp
+              </li>
+            </ul>
+            <a href="https://runa.odin-erp.cl" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="margin-top:var(--space-6); align-self:flex-start;">Ir a Odin Runa <i data-lucide="external-link" width="14" height="14"></i></a>
+          </div>
+
+          <!-- Odin Forseti -->
+          <div class="card reveal" data-category="hogar ia" style="display:flex; flex-direction:column;">
+            <div class="card__icon">
+              <i data-lucide="users" width="24" height="24"></i>
+            </div>
+            <div style="display:flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-4); flex-wrap:wrap;">
+              <span class="badge badge-amber">En desarrollo</span>
+              <span class="badge badge-purple">Hogar</span>
+              <span class="badge badge-cyan">IA</span>
+            </div>
+            <h3 class="card__title">Odin Forseti</h3>
+            <p class="card__text">Que el hogar no recaiga siempre en los mismos. Forseti distribuye las tareas del hogar entre quienes viven juntos, de forma justa y sin discusiones. Cada persona sabe qué le toca, cuándo y cómo — y el hogar funciona como equipo.</p>
+            <ul style="margin-top:var(--space-4); display:flex; flex-direction:column; gap:var(--space-2); flex:1;">
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Distribución automática y equitativa de tareas
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Historial de quién hizo qué y cuándo
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Notificaciones y recordatorios por persona
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Funciona para parejas, familias y compañeros de casa
+              </li>
+            </ul>
+            <div style="margin-top:var(--space-6);">
+              <button class="btn btn-outline btn-sm aviso-btn" data-producto="Odin Forseti" style="width:100%;">
+                <i data-lucide="bell" width="14" height="14"></i> Avisarme cuando esté lista
+              </button>
+              <div class="aviso-form" data-producto="Odin Forseti" style="display:none; margin-top:var(--space-4);">
+                <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-bottom:var(--space-3);">Te avisamos en cuanto esté disponible.</p>
+                <div style="display:flex; flex-direction:column; gap:var(--space-3);">
+                  <input type="text"  class="aviso-nombre" placeholder="Tu nombre" style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-2) var(--space-3); color:var(--color-text); font-size:var(--text-sm); outline:none;">
+                  <input type="email" class="aviso-email"  placeholder="Tu correo" style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-2) var(--space-3); color:var(--color-text); font-size:var(--text-sm); outline:none;">
+                  <button class="btn btn-primary btn-sm aviso-submit" style="width:100%;">Anotarme</button>
+                  <p class="aviso-msg" style="display:none; font-size:var(--text-xs); text-align:center;"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Odin Frigg -->
+          <div class="card reveal" data-category="hogar" style="display:flex; flex-direction:column;">
+            <div class="card__icon">
+              <i data-lucide="utensils" width="24" height="24"></i>
+            </div>
+            <div style="display:flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-4);">
+              <span class="badge badge-amber">En desarrollo</span>
+              <span class="badge badge-purple">Hogar</span>
+            </div>
+            <h3 class="card__title">Odin Frigg</h3>
+            <p class="card__text">Tu despensa inteligente. Tu cocina, sin sorpresas. Frigg sabe lo que tienes, te sugiere qué cocinar, te avisa antes de que algo venza y te ayuda a planificar las compras del mes sin desperdiciar nada. Cocina con lo que tienes, gasta solo lo que necesitas.</p>
+            <ul style="margin-top:var(--space-4); display:flex; flex-direction:column; gap:var(--space-2); flex:1;">
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Control de ingredientes, cantidades y fechas de vencimiento
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Sugerencias de recetas con lo que tienes disponible
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Presupuesto mensual para cocinar sin pasarte
+              </li>
+              <li style="display:flex; gap:var(--space-2); font-size:var(--text-xs); color:var(--color-text-muted);">
+                <i data-lucide="check" width="14" height="14" style="color:var(--color-accent); flex-shrink:0; margin-top:2px;"></i> Lista de compras inteligente semana a semana
+              </li>
+            </ul>
+            <div style="margin-top:var(--space-6);">
+              <button class="btn btn-outline btn-sm aviso-btn" data-producto="Odin Frigg" style="width:100%;">
+                <i data-lucide="bell" width="14" height="14"></i> Avisarme cuando esté lista
+              </button>
+              <div class="aviso-form" data-producto="Odin Frigg" style="display:none; margin-top:var(--space-4);">
+                <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-bottom:var(--space-3);">Te avisamos en cuanto esté disponible.</p>
+                <div style="display:flex; flex-direction:column; gap:var(--space-3);">
+                  <input type="text"  class="aviso-nombre" placeholder="Tu nombre" style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-2) var(--space-3); color:var(--color-text); font-size:var(--text-sm); outline:none;">
+                  <input type="email" class="aviso-email"  placeholder="Tu correo" style="background:var(--color-bg); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-2) var(--space-3); color:var(--color-text); font-size:var(--text-sm); outline:none;">
+                  <button class="btn btn-primary btn-sm aviso-submit" style="width:100%;">Anotarme</button>
+                  <p class="aviso-msg" style="display:none; font-size:var(--text-xs); text-align:center;"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner" aria-labelledby="cta-productos">
+      <div class="container cta-banner__content">
+        <h2 class="cta-banner__title" id="cta-productos">¿No sabes cuál necesitas?</h2>
+        <p class="cta-banner__subtitle">Cuéntanos qué problema quieres resolver y te orientamos sin compromiso.</p>
+        <a href="contacto.html" class="btn btn-primary btn-lg" style="background:white; color:var(--color-primary);">
+          Conversemos <i data-lucide="arrow-right" width="18" height="18"></i>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="original_png.png" alt="Odin Tech" width="100" height="34">
+          <p>Tecnología que piensa contigo. Hacemos páginas web, aplicaciones a medida y software de gestión para pymes, emprendedores y familias en Chile.</p>
+          <div class="footer__social" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/odin_tech_ti" aria-label="Instagram" target="_blank" rel="noopener"><i data-lucide="instagram" width="16" height="16"></i></a><a href="https://www.tiktok.com/@odin_tech_ti" aria-label="TikTok" target="_blank" rel="noopener"><i data-lucide="tiktok" width="16" height="16"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Empresa</h4>
+          <ul class="footer__links">
+            <li><a href="nosotros.html">Quiénes somos</a></li>
+            <li><a href="novedades.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Productos</h4>
+          <ul class="footer__links">
+            <li><a href="productos.html">Odin ERP</a></li>
+            <li><a href="productos.html">Odin Runa</a></li>
+            <li><a href="productos.html#forseti">Odin Forseti <span style="font-size:0.7em; opacity:0.6;">· pronto</span></a></li>
+            <li><a href="productos.html#frigg">Odin Frigg <span style="font-size:0.7em; opacity:0.6;">· pronto</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <div class="footer__contact-item"><i data-lucide="mail" width="14" height="14"></i><span>admin@odin-erp.cl</span></div>
+          <div class="footer__contact-item"><i data-lucide="phone" width="14" height="14"></i><a href="https://wa.me/56936445396" target="_blank" rel="noopener">+56 9 3644 5396</a></div>
+          <div class="footer__contact-item"><i data-lucide="map-pin" width="14" height="14"></i><span>Chile</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">© 2026 Odin Tech · Todos los derechos reservados</p>
+        <p class="footer__legal">Hecho en Chile 🇨🇱</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="whatsapp-float">
+    <span class="whatsapp-float__tooltip">¿Necesitas ayuda?</span>
+    <a href="https://wa.me/56936445396" class="whatsapp-float__btn" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
+      <i data-lucide="message-circle" width="22" height="22"></i>
+    </a>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.aviso-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var producto = btn.dataset.producto;
+          var form = btn.closest('div').querySelector('.aviso-form[data-producto="' + producto + '"]');
+          var isOpen = form.style.display !== 'none';
+          form.style.display = isOpen ? 'none' : 'block';
+          btn.style.display = isOpen ? '' : 'none';
+        });
+      });
+
+      document.querySelectorAll('.aviso-submit').forEach(function (submitBtn) {
+        submitBtn.addEventListener('click', function () {
+          var form      = submitBtn.closest('.aviso-form');
+          var producto  = form.dataset.producto;
+          var nombre    = form.querySelector('.aviso-nombre').value.trim();
+          var email     = form.querySelector('.aviso-email').value.trim();
+          var msg       = form.querySelector('.aviso-msg');
+
+          if (!nombre || !email) {
+            msg.textContent = 'Por favor completa tu nombre y correo.';
+            msg.style.color = 'var(--color-secondary)';
+            msg.style.display = 'block';
+            return;
+          }
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            msg.textContent = 'El correo no parece válido.';
+            msg.style.color = 'var(--color-secondary)';
+            msg.style.display = 'block';
+            return;
+          }
+
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Enviando...';
+
+          fetch('https://n8n.odin-erp.cl/webhook/sendMailUser', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              correo_usuario: email,
+              asunto: 'Interés previo lanzamiento: ' + producto,
+              cuerpo: 'Hola ' + nombre + ',\n\nGracias por tu interés en ' + producto + '. Te avisaremos en cuanto esté disponible.\n\nEquipo Odin Tech'
+            })
+          })
+          .then(function (res) {
+            msg.textContent = '¡Listo! Te avisamos cuando ' + producto + ' esté disponible.';
+            msg.style.color = 'var(--color-accent)';
+            msg.style.display = 'block';
+            form.querySelector('.aviso-nombre').disabled = true;
+            form.querySelector('.aviso-email').disabled = true;
+            submitBtn.style.display = 'none';
+          })
+          .catch(function () {
+            msg.textContent = 'Hubo un error. Intenta de nuevo o escríbenos por WhatsApp.';
+            msg.style.color = 'var(--color-secondary)';
+            msg.style.display = 'block';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Anotarme';
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

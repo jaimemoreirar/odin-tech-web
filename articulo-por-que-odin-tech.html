@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Por qué creamos Odin Tech | Odin Tech</title>
+  <meta name="description" content="Empezó como un proyecto para ordenar un negocio familiar pequeño. Terminó siendo algo más grande. Acá cuento cómo fue el proceso y para dónde vamos.">
+  <meta name="author" content="Jaime — Odin Tech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://odin-erp.cl/articulo-por-que-odin-tech.html">
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Por qué creamos Odin Tech — y qué queremos lograr">
+  <meta property="og:description" content="Empezó como un proyecto para ordenar un negocio familiar pequeño. Terminó siendo algo más grande.">
+  <meta property="og:image"       content="https://odin-erp.cl/assets/img/og-image.jpg">
+  <meta property="og:url"         content="https://odin-erp.cl/articulo-por-que-odin-tech.html">
+  <meta property="og:locale"      content="es_CL">
+  <link rel="icon" href="original_2.ico">
+  <link rel="apple-touch-icon"    href="/assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <style>
+    /* ── Estilos específicos del artículo ── */
+    .article-hero {
+      padding: var(--space-20) 0 var(--space-12);
+      background: linear-gradient(180deg, rgba(106,27,154,0.12) 0%, transparent 100%);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .article-hero__label {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--color-primary-light);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: var(--space-4);
+    }
+    .article-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: var(--space-5);
+      max-width: 780px;
+    }
+    .article-hero__subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      max-width: 640px;
+      margin-bottom: var(--space-8);
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+    .article-meta__avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--gradient-brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--text-sm);
+      color: white;
+      flex-shrink: 0;
+    }
+    .article-meta__info { display: flex; flex-direction: column; gap: 2px; }
+    .article-meta__author { font-family: var(--font-display); font-size: var(--text-sm); font-weight: 600; }
+    .article-meta__details { font-size: var(--text-xs); color: var(--color-text-muted); }
+    .article-meta__sep { color: var(--color-border); }
+
+    /* ── Layout artículo + sidebar ── */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: var(--space-16);
+      align-items: start;
+    }
+    @media (max-width: 1024px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-aside { display: none; }
+    }
+
+    /* ── Cuerpo del artículo ── */
+    .article-body {
+      max-width: 720px;
+    }
+    .article-body p {
+      font-size: var(--text-md);
+      line-height: 1.85;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-6);
+    }
+    .article-body p:last-child { margin-bottom: 0; }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--color-text);
+      margin: var(--space-12) 0 var(--space-4);
+      padding-top: var(--space-4);
+      border-top: 1px solid var(--color-border);
+    }
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: var(--text-md);
+      font-weight: 700;
+      color: var(--color-text);
+      margin: var(--space-8) 0 var(--space-3);
+    }
+    .article-body ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin-bottom: var(--space-6);
+      padding: 0;
+    }
+    .article-body ul li {
+      font-size: var(--text-md);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      padding-left: var(--space-6);
+      position: relative;
+    }
+    .article-body ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary-light);
+      font-weight: 700;
+    }
+    .article-body blockquote {
+      border-left: 3px solid var(--color-primary-light);
+      padding: var(--space-4) var(--space-6);
+      background: rgba(106,27,154,0.08);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: var(--space-8) 0;
+    }
+    .article-body blockquote p {
+      font-size: var(--text-md);
+      font-style: italic;
+      color: var(--color-text);
+      margin-bottom: 0;
+    }
+    .article-separator {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--space-10) 0;
+    }
+
+    /* ── Productos en el artículo ── */
+    .article-product {
+      display: flex;
+      gap: var(--space-4);
+      padding: var(--space-5);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-4);
+      transition: border-color var(--transition-base);
+    }
+    .article-product:hover { border-color: rgba(106,27,154,0.5); }
+    .article-product__icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--gradient-brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .article-product__body { flex: 1; }
+    .article-product__name {
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .article-product__desc {
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── Sidebar ── */
+    .article-aside { position: sticky; top: calc(var(--nav-height) + var(--space-8)); }
+    .aside-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin-bottom: var(--space-5);
+    }
+    .aside-card h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-4);
+    }
+    .aside-toc { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+    .aside-toc li a {
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+      line-height: 1.5;
+      display: block;
+      padding: var(--space-1) 0;
+    }
+    .aside-toc li a:hover { color: var(--color-text); }
+
+    /* ── Navegación artículo ── */
+    .article-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+      margin-top: var(--space-16);
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--color-border);
+    }
+    @media (max-width: 640px) { .article-nav { grid-template-columns: 1fr; } }
+    .article-nav__item {
+      padding: var(--space-5);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: border-color var(--transition-base), background var(--transition-base);
+    }
+    .article-nav__item:hover { border-color: rgba(106,27,154,0.5); background: rgba(106,27,154,0.05); }
+    .article-nav__dir { font-size: var(--text-xs); color: var(--color-text-muted); margin-bottom: var(--space-1); }
+    .article-nav__title { font-family: var(--font-display); font-size: var(--text-sm); font-weight: 600; line-height: 1.4; }
+    .article-nav__item--next { text-align: right; }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+  <div class="page-loader" id="page-loader" aria-hidden="true"><div class="page-loader__spinner"></div></div>
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-animate" aria-label="Navegación principal">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Odin Tech — inicio">
+          <img src="original_png.png" alt="Odin Tech" width="120" height="40">
+        </a>
+        <ul class="navbar__nav" role="list">
+          <li><a href="nosotros.html"  class="navbar__link">Nosotros</a></li>
+          <li><a href="productos.html" class="navbar__link">Productos</a></li>
+          <li><a href="servicios.html" class="navbar__link">Servicios</a></li>
+          <li><a href="cursos.html"    class="navbar__link">Cursos</a></li>
+          <li><a href="novedades.html" class="navbar__link active">Novedades</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <a href="cotizador.html" class="btn btn-primary btn-sm">Cotizar</a>
+          <button class="navbar__hamburger" id="nav-hamburger" aria-expanded="false" aria-controls="nav-mobile-menu" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="navbar__overlay" id="nav-overlay" aria-hidden="true"></div>
+    <div class="navbar__mobile-menu" id="nav-mobile-menu" role="dialog" aria-label="Menú de navegación">
+      <ul role="list">
+        <li><a href="nosotros.html"  class="navbar__link">Nosotros</a></li>
+        <li><a href="productos.html" class="navbar__link">Productos</a></li>
+        <li><a href="servicios.html" class="navbar__link">Servicios</a></li>
+        <li><a href="cursos.html"    class="navbar__link">Cursos</a></li>
+        <li><a href="novedades.html" class="navbar__link active">Novedades</a></li>
+      </ul>
+      <a href="cotizador.html" class="btn btn-primary" style="margin-top:auto;">Cotizar</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO DEL ARTÍCULO -->
+    <section class="article-hero">
+      <div class="container">
+        <span class="article-hero__label">// Novedades · abr 2026</span>
+        <h1 class="article-hero__title">Por qué creamos Odin Tech —<br>y qué queremos lograr</h1>
+        <p class="article-hero__subtitle">Empezó como un proyecto para ordenar un negocio familiar pequeño. Terminó siendo algo más grande.</p>
+        <div class="article-meta">
+          <div class="article-meta__avatar">J</div>
+          <div class="article-meta__info">
+            <span class="article-meta__author">Jaime</span>
+            <span class="article-meta__details">Fundador, Odin Tech</span>
+          </div>
+          <span class="article-meta__sep">·</span>
+          <span style="font-size:var(--text-xs); color:var(--color-text-muted);">5 min de lectura</span>
+          <span class="article-meta__sep">·</span>
+          <span class="badge badge-brand">Novedades</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUERPO DEL ARTÍCULO -->
+    <section class="section">
+      <div class="container">
+        <div class="article-layout">
+
+          <!-- Artículo principal -->
+          <article class="article-body reveal" aria-label="Artículo: Por qué creamos Odin Tech">
+
+            <p>La familia tenía un negocio de comida. Primero se llamó Dulce Tentación, después se transformó en Dreamland Coffee &amp; Gelato. No era una empresa grande — era un local, con todo lo que eso implica: pedidos, stock, proveedores, turnos, ventas que a veces se anotaban en papel y otras en el celular. Y siempre con la sensación de que algo se estaba escapando.</p>
+
+            <p>El problema no era la voluntad de ordenarse. El problema era que no existía una herramienta que se adaptara a eso.</p>
+
+            <p>Las opciones que encontramos eran básicamente dos: software caro, diseñado para empresas medianas, con módulos que no íbamos a usar nunca — o planillas de Excel que funcionaban hasta que dejaban de funcionar.</p>
+
+            <p>Ninguna de las dos calzaba.</p>
+
+            <h2 id="que-necesitabamos">Lo que necesitábamos</h2>
+
+            <p>En el fondo era simple: registrar las ventas del día sin depender de nadie, tener la caja cuadrada al cierre, y saber si el negocio estaba bien o no sin necesitar a un contador al lado cada vez.</p>
+
+            <p>Con el inventario era diferente. Ahí sabíamos que había aprendizaje por delante — un buen control de stock requiere disciplina, consistencia y entender la lógica del sistema. Pero la herramienta tenía que hacer su parte: ser clara, ordenada, y no agregar complejidad encima de la que ya existe. Que la curva de aprendizaje valiera la pena.</p>
+
+            <blockquote>
+              <p>Lo que no encontramos, empezamos a construirlo nosotros.</p>
+            </blockquote>
+
+            <h2 id="como-nacio">Cómo nació Odin Tech</h2>
+
+            <p>La primera versión de Odin ERP era básica. Muy básica. Pero servía para lo que necesitábamos: registrar, ordenar, consultar. Con el tiempo fuimos sumando módulos, mejorando la interfaz y entendiendo qué necesitaban otros negocios similares.</p>
+
+            <p>El criterio siempre fue el mismo: ¿esto le ahorra tiempo a alguien real? ¿Lo puede usar alguien sin pasarse horas aprendiendo desde cero?</p>
+
+            <p>Si la respuesta era sí, avanzábamos. Si no, lo descartábamos o lo postergábamos hasta que tuviera más sentido.</p>
+
+            <p>En paralelo empezamos a recibir pedidos de otros negocios conocidos: páginas web, una app para gestionar turnos, un sistema de pedidos online. Cada proyecto nuevo enseñaba algo. Eso fue armando el equipo y la experiencia que hoy tiene Odin Tech.</p>
+
+            <h2 id="que-hacemos-hoy">Qué hacemos hoy</h2>
+
+            <p>Hoy Odin Tech tiene tres líneas de trabajo:</p>
+
+            <div class="article-product">
+              <div class="article-product__icon">
+                <i data-lucide="layout-dashboard" width="20" height="20" style="color:white;"></i>
+              </div>
+              <div class="article-product__body">
+                <div class="article-product__name">Odin ERP</div>
+                <div class="article-product__desc">El software de gestión que empezamos a construir para el negocio familiar. Módulos de ventas, inventario, caja y más. Pensado para pymes y negocios pequeños que necesitan ordenarse sin gastar fortunas.</div>
+              </div>
+            </div>
+
+            <div class="article-product">
+              <div class="article-product__icon" style="background:linear-gradient(135deg,var(--color-secondary),var(--color-grad-3));">
+                <i data-lucide="globe" width="20" height="20" style="color:white;"></i>
+              </div>
+              <div class="article-product__body">
+                <div class="article-product__name">Páginas web y apps a medida</div>
+                <div class="article-product__desc">Para negocios que necesitan presencia digital o una herramienta específica. Sin plantillas genéricas ni inflación de características que nadie va a usar.</div>
+              </div>
+            </div>
+
+            <div class="article-product">
+              <div class="article-product__icon" style="background:linear-gradient(135deg,var(--color-grad-3),var(--color-grad-4));">
+                <i data-lucide="message-square-heart" width="20" height="20" style="color:white;"></i>
+              </div>
+              <div class="article-product__body">
+                <div class="article-product__name">Odin Runa</div>
+                <div class="article-product__desc">Una app de análisis de conversaciones de WhatsApp. Nació de un proyecto distinto, pero encaja con la misma lógica: extraer información útil de datos que ya tienes.</div>
+              </div>
+            </div>
+
+            <h2 id="para-donde-vamos">Para dónde vamos</h2>
+
+            <p>La meta no es ser una empresa grande. La meta es ser una empresa que resuelve problemas reales para personas reales.</p>
+
+            <p>En Chile hay miles de negocios pequeños que todavía llevan todo en papel, en Excel o de memoria. No porque sean tecnófobos — sino porque nadie les ha ofrecido algo que valga la pena adoptar. Algo que no requiera un consultor para instalarlo ni un manual de 80 páginas para usarlo.</p>
+
+            <p>Ahí es donde queremos estar. Con negocios que tienen entre 2 y 20 personas, que llevan años funcionando con lo que tienen, y que con la herramienta correcta podrían hacer las mismas cosas con mucho menos estrés.</p>
+
+            <p>No sé si en cinco años seguiremos siendo un equipo pequeño o habremos crecido. Lo que sí sé es que el origen del proyecto — ese negocio familiar que necesitaba algo mejor — va a seguir siendo la referencia cuando haya que tomar decisiones.</p>
+
+            <hr class="article-separator">
+
+            <p style="font-size:var(--text-sm); color:var(--color-text-muted); font-style:italic;">Si tienes un negocio pequeño y estás pasando por algo parecido a lo que cuento acá, escríbenos. No para venderte nada — sino para entender mejor qué necesitas.</p>
+
+            <!-- Navegación entre artículos -->
+            <nav class="article-nav" aria-label="Navegación entre artículos">
+              <a href="novedades.html" class="article-nav__item">
+                <div class="article-nav__dir">← Volver a</div>
+                <div class="article-nav__title">Todos los artículos</div>
+              </a>
+              <a href="novedades.html" class="article-nav__item article-nav__item--next">
+                <div class="article-nav__dir">Siguiente →</div>
+                <div class="article-nav__title">5 señales de que tu negocio necesita algo mejor que Excel</div>
+              </a>
+            </nav>
+
+          </article>
+
+          <!-- Sidebar -->
+          <aside class="article-aside" aria-label="Tabla de contenidos">
+
+            <div class="aside-card">
+              <h4>En este artículo</h4>
+              <ul class="aside-toc">
+                <li><a href="#que-necesitabamos">Lo que necesitábamos</a></li>
+                <li><a href="#como-nacio">Cómo nació Odin Tech</a></li>
+                <li><a href="#que-hacemos-hoy">Qué hacemos hoy</a></li>
+                <li><a href="#para-donde-vamos">Para dónde vamos</a></li>
+              </ul>
+            </div>
+
+            <div class="aside-card">
+              <h4>Otros artículos</h4>
+              <ul class="aside-toc">
+                <li><a href="novedades.html">5 señales de que tu negocio necesita algo mejor que Excel</a></li>
+                <li><a href="novedades.html">El inventario siempre es un caos hasta que no lo es</a></li>
+                <li><a href="novedades.html">Odin Runa: qué es, para qué sirve</a></li>
+              </ul>
+            </div>
+
+            <div class="aside-card" style="background:linear-gradient(135deg,rgba(106,27,154,0.2),rgba(194,24,91,0.15));">
+              <h4>¿Te interesa Odin ERP?</h4>
+              <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-bottom:var(--space-4); line-height:1.6;">Cuéntanos de tu negocio y vemos si tiene sentido.</p>
+              <a href="contacto.html" class="btn btn-primary btn-sm" style="width:100%; text-align:center;">Conversemos</a>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="original_png.png" alt="Odin Tech" width="100" height="34">
+          <p>Tecnología que piensa contigo. Hacemos páginas web, aplicaciones a medida y software de gestión para pymes, emprendedores y familias en Chile.</p>
+          <div class="footer__social" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/odin_tech_ti" aria-label="Instagram" target="_blank" rel="noopener"><i data-lucide="instagram" width="16" height="16"></i></a><a href="https://www.tiktok.com/@odin_tech_ti" aria-label="TikTok" target="_blank" rel="noopener"><i data-lucide="tiktok" width="16" height="16"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Empresa</h4>
+          <ul class="footer__links">
+            <li><a href="nosotros.html">Quiénes somos</a></li>
+            <li><a href="novedades.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Productos</h4>
+          <ul class="footer__links">
+            <li><a href="productos.html">Odin ERP</a></li>
+            <li><a href="productos.html">Odin Runa</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <div class="footer__contact-item"><i data-lucide="mail" width="14" height="14"></i><span>admin@odin-erp.cl</span></div>
+          <div class="footer__contact-item"><i data-lucide="phone" width="14" height="14"></i><a href="https://wa.me/56936445396" target="_blank" rel="noopener">+56 9 3644 5396</a></div>
+          <div class="footer__contact-item"><i data-lucide="map-pin" width="14" height="14"></i><span>Chile</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">© 2026 Odin Tech · Todos los derechos reservados</p>
+        <p class="footer__legal">Hecho en Chile 🇨🇱</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="whatsapp-float">
+    <span class="whatsapp-float__tooltip">¿Necesitas ayuda?</span>
+    <a href="https://wa.me/56936445396" class="whatsapp-float__btn" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
+      <i data-lucide="message-circle" width="22" height="22"></i>
+    </a>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+</body>
+</html>

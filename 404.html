@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página no encontrada | Odin Tech</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="original_2.ico">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-8);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .error-page__bg {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .error-page__number {
+      font-family: var(--font-display);
+      font-size: clamp(6rem, 20vw, 14rem);
+      font-weight: 800;
+      line-height: 1;
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      opacity: 0.15;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      user-select: none;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .error-page__content {
+      position: relative;
+      z-index: 1;
+      max-width: 520px;
+    }
+
+    .error-page__icon {
+      width: 72px;
+      height: 72px;
+      border-radius: var(--radius-xl);
+      background: rgba(194, 24, 91, 0.12);
+      border: 1px solid rgba(194, 24, 91, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-8);
+      color: var(--color-secondary);
+    }
+
+    .error-page__code {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: var(--space-4);
+      display: block;
+    }
+
+    .error-page__title {
+      font-size: var(--text-3xl);
+      font-weight: 800;
+      margin-bottom: var(--space-4);
+    }
+
+    .error-page__text {
+      font-size: var(--text-md);
+      color: var(--color-text-muted);
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: var(--space-10);
+    }
+
+    .error-page__actions {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .error-page__links {
+      margin-top: var(--space-12);
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--color-border-subtle);
+    }
+
+    .error-page__links p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-4);
+    }
+
+    .error-page__links-grid {
+      display: flex;
+      gap: var(--space-3);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .error-page__links-grid a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      padding: var(--space-2) var(--space-4);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      transition: color var(--transition-fast),
+                  border-color var(--transition-fast),
+                  background var(--transition-fast);
+    }
+
+    .error-page__links-grid a:hover {
+      color: var(--color-accent);
+      border-color: var(--color-accent);
+      background: rgba(0, 229, 255, 0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-loader" id="page-loader" aria-hidden="true">
+    <div class="page-loader__spinner"></div>
+  </div>
+
+  <main class="error-page" id="main-content">
+
+    <!-- Fondo decorativo -->
+    <div class="error-page__bg">
+      <div class="hero-orb hero-orb--1" style="opacity:0.5;"></div>
+      <div class="hero-orb hero-orb--2" style="opacity:0.3;"></div>
+      <div class="hero-grid" style="opacity:0.3;"></div>
+    </div>
+
+    <!-- Número grande de fondo -->
+    <div class="error-page__number" aria-hidden="true">404</div>
+
+    <!-- Contenido -->
+    <div class="error-page__content hero-animate-1">
+
+      <div class="error-page__icon">
+        <i data-lucide="compass" width="32" height="32"></i>
+      </div>
+
+      <span class="error-page__code">Error 404</span>
+
+      <h1 class="error-page__title">
+        Esta página no <span class="text-gradient">existe</span>
+      </h1>
+
+      <p class="error-page__text">
+        La página que buscas fue movida, eliminada o simplemente nunca existió.
+        Pero hay mucho más por explorar.
+      </p>
+
+      <div class="error-page__actions">
+        <a href="index.html" class="btn btn-primary btn-lg">
+          <i data-lucide="home" width="18" height="18"></i>
+          Volver al inicio
+        </a>
+        <a href="contacto.html" class="btn btn-secondary btn-lg">
+          Contactarnos
+        </a>
+      </div>
+
+      <div class="error-page__links">
+        <p>O navega directamente a:</p>
+        <div class="error-page__links-grid">
+          <a href="productos.html">
+            <i data-lucide="layout-dashboard" width="14" height="14"></i>
+            Productos
+          </a>
+          <a href="servicios.html">
+            <i data-lucide="briefcase" width="14" height="14"></i>
+            Servicios
+          </a>
+          <a href="cursos.html">
+            <i data-lucide="graduation-cap" width="14" height="14"></i>
+            Cursos
+          </a>
+          <a href="novedades.html">
+            <i data-lucide="newspaper" width="14" height="14"></i>
+            Blog
+          </a>
+          <a href="nosotros.html">
+            <i data-lucide="users" width="14" height="14"></i>
+            Nosotros
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

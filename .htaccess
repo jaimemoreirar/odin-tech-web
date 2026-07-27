@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirige .html → URL limpia (evita duplicados en Google)
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R=301]
+
+# Sirve el .html cuando piden la URL limpia
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

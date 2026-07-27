@@ -1,0 +1,17 @@
+Colores del Degradado Principal (ODIN)
+Deep Orchid (Morado Base): #6A1B9A
+
+Vibrant Fuchsia (Fucsia): #C2185B
+
+Luminous Magenta (Magenta): #E91E63
+
+Sunset Orange (Naranja): #FF5722
+
+Sunlight Yellow (Amarillo): #FFEB3B
+
+Colores de Contraste y Tipografía
+Cosmic Depth (Azul casi negro para el slogan): #1A1A2E
+
+Tech-Gray (Gris oscuro para textos secundarios): #212121
+
+Point Cyan (Cian de acento para puntos/detalles): #00E5FF

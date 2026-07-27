@@ -1,0 +1,343 @@
+/* ============================================================
+   ODIN TECH — animations.css
+   Keyframes, transiciones, reveals, efectos decorativos
+   ============================================================ */
+
+/* === KEYFRAMES === */
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(194, 24, 91, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(194, 24, 91, 0.6),
+                0 0 48px rgba(106, 27, 154, 0.3);
+  }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Partículas / constelación del hero */
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+  33%       { transform: translateY(-18px) translateX(10px); opacity: 0.6; }
+  66%       { transform: translateY(8px) translateX(-8px); opacity: 0.4; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(1.4); }
+}
+
+/* Scroll indicator */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(8px); opacity: 0.4; }
+}
+
+/* Underline animado de links */
+@keyframes underlineExpand {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+/* === HERO — FONDO ANIMADO === */
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Capa de ruido/grain */
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.03;
+}
+
+/* Orbes de luz del hero */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.hero-orb--1 {
+  width: 600px;
+  height: 600px;
+  background: rgba(106, 27, 154, 0.25);
+  top: -200px;
+  right: -100px;
+  animation: float 12s ease-in-out infinite;
+}
+
+.hero-orb--2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(194, 24, 91, 0.2);
+  bottom: -100px;
+  left: 10%;
+  animation: float 16s ease-in-out infinite reverse;
+}
+
+.hero-orb--3 {
+  width: 250px;
+  height: 250px;
+  background: rgba(0, 229, 255, 0.1);
+  top: 30%;
+  left: 40%;
+  animation: float 10s ease-in-out infinite 2s;
+}
+
+/* Partículas (puntos) del hero */
+.hero-particles {
+  position: absolute;
+  inset: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.particle:nth-child(odd) {
+  background: rgba(194, 24, 91, 0.6);
+}
+
+.particle:nth-child(1)  { top: 15%; left: 10%; animation: twinkle 3.2s ease-in-out infinite; }
+.particle:nth-child(2)  { top: 25%; left: 80%; animation: twinkle 4.1s ease-in-out infinite 0.5s; }
+.particle:nth-child(3)  { top: 70%; left: 20%; animation: twinkle 2.8s ease-in-out infinite 1s; }
+.particle:nth-child(4)  { top: 55%; left: 65%; animation: twinkle 5s ease-in-out infinite 0.2s; }
+.particle:nth-child(5)  { top: 10%; left: 45%; animation: twinkle 3.7s ease-in-out infinite 1.5s; }
+.particle:nth-child(6)  { top: 80%; left: 75%; animation: twinkle 4.5s ease-in-out infinite 0.8s; }
+.particle:nth-child(7)  { top: 40%; left: 5%;  animation: twinkle 3s ease-in-out infinite 2s; }
+.particle:nth-child(8)  { top: 90%; left: 40%; animation: twinkle 6s ease-in-out infinite 0.3s; }
+.particle:nth-child(9)  { top: 35%; left: 90%; animation: twinkle 2.5s ease-in-out infinite 1.2s; }
+.particle:nth-child(10) { top: 60%; left: 50%; animation: twinkle 4s ease-in-out infinite 0.7s; }
+
+/* Patrón geométrico nórdico (grid de puntos) */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(106, 27, 154, 0.15) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.6;
+}
+
+/* === SCROLL INDICATOR === */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+}
+
+.scroll-indicator__line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--color-accent));
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+.scroll-indicator__text {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* === DEGRADADO ANIMADO (botones / CTAs especiales) === */
+.btn-animated-gradient {
+  background-size: 200% 200%;
+  background-image: var(--gradient-brand-full);
+  animation: gradientShift 4s ease infinite;
+}
+
+/* === GLOW PULSE (elemento destacado) === */
+.glow-pulse {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* === HOVER LIFT (tarjetas con elevación) === */
+.hover-lift {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-secondary);
+}
+
+/* === HOVER SCALE === */
+.hover-scale {
+  transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+/* === TEXTO TIPEADO (cursor parpadeante) === */
+.typewriter-cursor::after {
+  content: '|';
+  color: var(--color-accent);
+  animation: pulse 1s step-end infinite;
+  margin-left: 2px;
+}
+
+/* === ANIMACIONES DE ENTRADA PARA HERO === */
+.hero-animate-1 { animation: fadeInUp 0.8s var(--transition-slow) both; }
+.hero-animate-2 { animation: fadeInUp 0.8s var(--transition-slow) 0.15s both; }
+.hero-animate-3 { animation: fadeInUp 0.8s var(--transition-slow) 0.30s both; }
+.hero-animate-4 { animation: fadeInUp 0.8s var(--transition-slow) 0.45s both; }
+
+/* === NAVBAR FADEDOWN === */
+.navbar-animate {
+  animation: fadeInDown 0.6s var(--transition-slow) both;
+}
+
+/* === SEPARADOR ANIMADO === */
+.divider-animated {
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-brand);
+  border-radius: var(--radius-full);
+  margin-block: var(--space-4);
+  transition: width var(--transition-slow);
+}
+
+.section-header:hover .divider-animated,
+.page-hero__content .divider-animated {
+  width: 120px;
+}
+
+/* === IMAGEN CON OVERLAY DE HOVER === */
+.img-hover-zoom {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.img-hover-zoom img {
+  transition: transform var(--transition-slow);
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* === REDUCIR MOVIMIENTO (accesibilidad) === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hero-orb,
+  .particle,
+  .scroll-indicator__line {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

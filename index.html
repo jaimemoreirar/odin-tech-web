@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odin Tech | Tecnología que piensa contigo | Pymes · Chile</title>
+  <meta name="description" content="Odin Tech: páginas web, apps a medida y software para pymes en Chile. Odin ERP, sistema de gestión y punto de venta (POS) para negocios. Sin tecnicismos.">
+  <meta name="author" content="Odin Tech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://odin-erp.cl/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Odin Tech | Tecnología que piensa contigo">
+  <meta property="og:description" content="Soluciones tecnológicas a medida para empresas chilenas. Apps web, cursos online y consultoría.">
+  <meta property="og:image"       content="https://odin-erp.cl/assets/img/og-image.jpg">
+  <meta property="og:url"         content="https://odin-erp.cl/">
+  <meta property="og:site_name"   content="Odin Tech">
+  <meta property="og:locale"      content="es_CL">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Odin Tech | Tecnología que piensa contigo">
+  <meta name="twitter:description" content="Soluciones tecnológicas a medida para empresas chilenas.">
+  <meta name="twitter:image"       content="https://odin-erp.cl/assets/img/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="original_2.ico">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <!-- Preconnect Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Odin Tech",
+    "url": "https://odin-erp.cl",
+    "logo": "https://odin-erp.cl/original_png.png",
+    "description": "Empresa chilena de tecnología para pymes y personas: páginas web, aplicaciones a medida y software de gestión.",
+    "slogan": "Tecnología que piensa contigo",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CL"
+    },
+    "sameAs": [
+      "https://www.instagram.com/odin_tech_ti"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip link -->
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+  <!-- Loader -->
+  <div class="page-loader" id="page-loader" aria-hidden="true">
+    <div class="page-loader__spinner"></div>
+  </div>
+
+  <!-- Cursor personalizado (desktop) -->
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header>
+    <nav class="navbar navbar-animate" aria-label="Navegación principal">
+      <div class="navbar__inner">
+
+        <a href="index.html" class="navbar__logo" aria-label="Odin Tech — inicio">
+          <img src="original_png.png" alt="Odin Tech" width="120" height="40">
+        </a>
+
+        <ul class="navbar__nav" role="list">
+          <li><a href="nosotros.html"  class="navbar__link">Nosotros</a></li>
+          <li><a href="productos.html" class="navbar__link">Productos</a></li>
+          <li><a href="servicios.html" class="navbar__link">Servicios</a></li>
+          <li><a href="cursos.html"    class="navbar__link">Cursos</a></li>
+          <li><a href="novedades.html" class="navbar__link">Novedades</a></li>
+        </ul>
+
+        <div class="navbar__actions">
+          <a href="cotizador.html" class="btn btn-primary btn-sm">Cotizar</a>
+          <button
+            class="navbar__hamburger"
+            id="nav-hamburger"
+            aria-expanded="false"
+            aria-controls="nav-mobile-menu"
+            aria-label="Abrir menú de navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="navbar__overlay" id="nav-overlay" aria-hidden="true"></div>
+    <div class="navbar__mobile-menu" id="nav-mobile-menu" role="dialog" aria-label="Menú de navegación">
+      <ul role="list">
+        <li><a href="nosotros.html"  class="navbar__link">Nosotros</a></li>
+        <li><a href="productos.html" class="navbar__link">Productos</a></li>
+        <li><a href="servicios.html" class="navbar__link">Servicios</a></li>
+        <li><a href="cursos.html"    class="navbar__link">Cursos</a></li>
+        <li><a href="novedades.html" class="navbar__link">Novedades</a></li>
+      </ul>
+      <a href="cotizador.html" class="btn btn-primary" style="margin-top: auto;">Cotizar</a>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main id="main-content">
+
+    <!-- 1. HERO -->
+    <section class="hero" aria-label="Presentación principal">
+      <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+        <div class="hero-orb hero-orb--3"></div>
+        <div class="hero-particles" aria-hidden="true">
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+          <span class="particle"></span>
+        </div>
+      </div>
+
+      <div class="hero__content container">
+        <span class="hero__label hero-animate-1 font-mono text-accent">
+          // Odin Tech · Chile
+        </span>
+        <h1 class="hero__title hero-animate-2">
+          Tecnología que<br>
+          <span class="text-gradient">piensa contigo</span>
+        </h1>
+        <p class="hero__subtitle hero-animate-3">
+          Hacemos páginas web, aplicaciones y software para que tu negocio,
+          emprendimiento o proyecto funcione mejor — sin tecnicismos, sin vueltas.
+        </p>
+        <div class="hero__actions hero-animate-4">
+          <a href="servicios.html" class="btn btn-primary btn-lg">Ver servicios</a>
+          <a href="contacto.html"  class="btn btn-secondary btn-lg">Conversemos</a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <span class="scroll-indicator__text">scroll</span>
+        <div class="scroll-indicator__line"></div>
+      </div>
+    </section>
+
+
+    <!-- 3. PROPUESTA DE VALOR -->
+    <section class="section" aria-labelledby="valor-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Por qué elegirnos</span>
+          <h2 class="section-title" id="valor-title">
+            Simple, cercano y <span class="text-gradient">a tu medida</span>
+          </h2>
+          <p class="section-subtitle">
+            Somos una empresa joven con ganas de hacer las cosas bien. Nos importa entenderte antes de escribir una sola línea de código.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card reveal">
+            <div class="card__icon">
+              <i data-lucide="message-circle" width="24" height="24"></i>
+            </div>
+            <h3 class="card__title">Te hablamos en simple</h3>
+            <p class="card__text">
+              Sin tecnicismos ni jerga rara. Te explicamos todo con claridad para que entiendas qué estamos haciendo y por qué.
+            </p>
+          </div>
+          <div class="card reveal">
+            <div class="card__icon">
+              <i data-lucide="sliders" width="24" height="24"></i>
+            </div>
+            <h3 class="card__title">Hecho para ti</h3>
+            <p class="card__text">
+              No usamos plantillas genéricas. Cada proyecto parte de conocer tu negocio, tu forma de trabajar y lo que realmente necesitas.
+            </p>
+          </div>
+          <div class="card reveal">
+            <div class="card__icon">
+              <i data-lucide="shield-check" width="24" height="24"></i>
+            </div>
+            <h3 class="card__title">Con soporte de verdad</h3>
+            <p class="card__text">
+              No desaparecemos al entregar. Estamos disponibles para resolver dudas, hacer ajustes y acompañarte cuando lo necesites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PRODUCTOS DESTACADOS -->
+    <section class="section" style="background: var(--color-surface);" aria-labelledby="productos-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Nuestros productos</span>
+          <h2 class="section-title" id="productos-title">
+            Odin ERP y Odin Runa: software que <span class="text-gradient">trabaja para ti</span>
+          </h2>
+          <p class="section-subtitle">
+            Herramientas propias pensadas para pymes y negocios en Chile — aunque no sepas nada de tecnología, las puedes usar sin problema.
+          </p>
+        </div>
+
+        <div class="grid-2" style="max-width:800px; margin:0 auto;">
+          <div class="card reveal">
+            <div class="card__icon">
+              <i data-lucide="layout-dashboard" width="24" height="24"></i>
+            </div>
+            <span class="badge badge-cyan" style="margin-bottom: var(--space-3);">Disponible</span>
+            <h3 class="card__title">Odin ERP</h3>
+            <p class="card__text">
+              Ordena tu negocio en un solo lugar: ventas, inventario, pedidos y reportes. Incluye punto de venta (POS) para atender directamente en tu local. Sin planillas de Excel, sin caos.
+            </p>
+            <a href="productos.html" class="btn btn-outline btn-sm" style="margin-top: var(--space-5);">
+              Conocer más <i data-lucide="arrow-right" width="14" height="14"></i>
+            </a>
+          </div>
+          <div class="card reveal">
+            <div class="card__icon">
+              <i data-lucide="message-square-heart" width="24" height="24"></i>
+            </div>
+            <div style="display:flex; gap:var(--space-2); margin-bottom:var(--space-3);">
+              <span class="badge badge-cyan">Disponible</span>
+              <span class="badge badge-purple">IA · NLP</span>
+            </div>
+            <h3 class="card__title">Odin Runa</h3>
+            <p class="card__text">
+              ¿Quieres entender mejor cómo te comunicas? Odin Runa analiza tus conversaciones de WhatsApp y te muestra patrones que no habías notado.
+            </p>
+            <div style="display:flex; gap:var(--space-3); flex-wrap:wrap; margin-top:var(--space-5);">
+              <a href="https://runa.odin-erp.cl" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ir a Odin Runa <i data-lucide="external-link" width="14" height="14"></i></a>
+              <a href="productos.html" class="btn btn-outline btn-sm">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: var(--space-10);">
+          <a href="productos.html" class="btn btn-primary">Ver todos los productos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SERVICIOS -->
+    <section class="section" aria-labelledby="servicios-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Lo que hacemos</span>
+          <h2 class="section-title" id="servicios-title">
+            Dinos qué necesitas y <span class="text-gradient">lo construimos</span>
+          </h2>
+        </div>
+
+        <!-- Servicio 1 -->
+        <div class="services-row reveal">
+          <div>
+            <span class="section-label">01</span>
+            <h3 style="font-size:var(--text-2xl); margin-bottom:var(--space-4);">Tu página web, tal como la imaginas</h3>
+            <p style="color:var(--color-text-muted); margin-bottom:var(--space-6);">
+              Cuéntanos qué quieres mostrar, vender o comunicar — y nosotros lo hacemos realidad. Una página bonita, rápida y que se vea bien en cualquier teléfono o computador.
+            </p>
+            <ul style="display:flex; flex-direction:column; gap:var(--space-3);">
+              <li style="display:flex; gap:var(--space-3); align-items:center; color:var(--color-text-muted); font-size:var(--text-sm);">
+                <i data-lucide="check-circle" width="16" height="16" style="color:var(--color-accent); flex-shrink:0;"></i>
+                Diseño adaptado a tu marca e imagen
+              </li>
+              <li style="display:flex; gap:var(--space-3); align-items:center; color:var(--color-text-muted); font-size:var(--text-sm);">
+                <i data-lucide="check-circle" width="16" height="16" style="color:var(--color-accent); flex-shrink:0;"></i>
+                Se ve bien en celular, tablet y computador
+              </li>
+              <li style="display:flex; gap:var(--space-3); align-items:center; color:var(--color-text-muted); font-size:var(--text-sm);">
+                <i data-lucide="check-circle" width="16" height="16" style="color:var(--color-accent); flex-shrink:0;"></i>
+                Formulario de contacto, galería, tienda — lo que necesites
+              </li>
+            </ul>
+            <a href="servicios.html" class="btn btn-secondary" style="margin-top:var(--space-6);">Ver más</a>
+          </div>
+          <div class="services-visual" style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-xl); padding:var(--space-8);">
+            <div style="display:flex; flex-direction:column; gap:var(--space-4);">
+              <div style="background:rgba(106,27,154,0.15); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-4); display:flex; align-items:center; gap:var(--space-3);">
+                <i data-lucide="globe" width="22" height="22" style="color:var(--color-accent); flex-shrink:0;"></i>
+                <div style="font-size:var(--text-sm); color:var(--color-text-muted);">Presencia online lista para compartir</div>
+              </div>
+              <div style="background:rgba(194,24,91,0.1); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-4); display:flex; align-items:center; gap:var(--space-3);">
+                <i data-lucide="smartphone" width="22" height="22" style="color:var(--color-secondary); flex-shrink:0;"></i>
+                <div style="font-size:var(--text-sm); color:var(--color-text-muted);">Funciona perfecto en cualquier dispositivo</div>
+              </div>
+              <div style="background:rgba(0,229,255,0.08); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-4); display:flex; align-items:center; gap:var(--space-3);">
+                <i data-lucide="pencil" width="22" height="22" style="color:var(--color-grad-5); flex-shrink:0;"></i>
+                <div style="font-size:var(--text-sm); color:var(--color-text-muted);">Contenido editable cuando quieras</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div class="services-row reveal">
+          <div class="services-visual" style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-xl); padding:var(--space-8);">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-4);">
+              <div style="background:rgba(106,27,154,0.12); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-4); text-align:center;">
+                <i data-lucide="clipboard-list" width="28" height="28" style="color:var(--color-accent); margin:auto;"></i>
+                <div style="font-size:var(--text-xs); margin-top:var(--space-2); color:var(--color-text-muted);">Tus requisitos</div>
+              </div>
+              <div style="background:rgba(194,24,91,0.1); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-4); text-align:center;">
+                <i data-lucide="code-2" width="28" height="28" style="color:var(--color-secondary); margin:auto;"></i>
+                <div style="font-size:var(--text-xs); margin-top:var(--space-2); color:var(--color-text-muted);">Lo desarrollamos</div>
+              </div>
+              <div style="background:rgba(0,229,255,0.08); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-4); text-align:center;">
+                <i data-lucide="eye" width="28" height="28" style="color:var(--color-grad-5); margin:auto;"></i>
+                <div style="font-size:var(--text-xs); margin-top:var(--space-2); color:var(--color-text-muted);">Lo revisas</div>
+              </div>
+              <div style="background:rgba(255,87,34,0.1); border:1px solid var(--color-border); border-radius:var(--radius-md); padding:var(--space-4); text-align:center;">
+                <i data-lucide="rocket" width="28" height="28" style="color:var(--color-grad-4); margin:auto;"></i>
+                <div style="font-size:var(--text-xs); margin-top:var(--space-2); color:var(--color-text-muted);">Lo lanzamos</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span class="section-label">02</span>
+            <h3 style="font-size:var(--text-2xl); margin-bottom:var(--space-4);">Una app hecha justo para lo que necesitas</h3>
+            <p style="color:var(--color-text-muted); margin-bottom:var(--space-6);">
+              Si tienes un proceso que repites a mano, una idea que no encuentras en el mercado, o algo que quieres digitalizar — te hacemos la aplicación exacta que necesitas, paso a paso.
+            </p>
+            <a href="servicios.html" class="btn btn-secondary">Ver más</a>
+          </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div class="services-row reveal">
+          <div>
+            <span class="section-label">03</span>
+            <h3 style="font-size:var(--text-2xl); margin-bottom:var(--space-4);">Software listo para usar</h3>
+            <p style="color:var(--color-text-muted); margin-bottom:var(--space-6);">
+              Si no necesitas algo completamente a medida, tenemos software propio que podemos instalar y configurar para tu negocio. Odin ERP para gestión, Odin Runa para análisis de conversaciones.
+            </p>
+            <a href="productos.html" class="btn btn-secondary">Ver productos</a>
+          </div>
+          <div style="background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-xl); padding:var(--space-8);">
+            <div style="display:flex; flex-direction:column; gap:var(--space-4);">
+              <div style="display:flex; align-items:center; gap:var(--space-4);">
+                <div style="width:40px; height:40px; border-radius:var(--radius-md); background:var(--gradient-brand); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <i data-lucide="zap" width="18" height="18" style="color:white;"></i>
+                </div>
+                <div>
+                  <div style="font-family:var(--font-display); font-size:var(--text-sm); font-weight:600;">Listo en días, no en meses</div>
+                  <div style="font-size:var(--text-xs); color:var(--color-text-muted);">Instalación y configuración incluidas</div>
+                </div>
+              </div>
+              <div style="display:flex; align-items:center; gap:var(--space-4);">
+                <div style="width:40px; height:40px; border-radius:var(--radius-md); background:var(--gradient-brand); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <i data-lucide="settings" width="18" height="18" style="color:white;"></i>
+                </div>
+                <div>
+                  <div style="font-family:var(--font-display); font-size:var(--text-sm); font-weight:600;">Adaptable a tu negocio</div>
+                  <div style="font-size:var(--text-xs); color:var(--color-text-muted);">Lo ajustamos a como tú trabajas</div>
+                </div>
+              </div>
+              <div style="display:flex; align-items:center; gap:var(--space-4);">
+                <div style="width:40px; height:40px; border-radius:var(--radius-md); background:var(--gradient-brand); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <i data-lucide="life-buoy" width="18" height="18" style="color:white;"></i>
+                </div>
+                <div>
+                  <div style="font-family:var(--font-display); font-size:var(--text-sm); font-weight:600;">Con soporte incluido</div>
+                  <div style="font-size:var(--text-xs); color:var(--color-text-muted);">No quedas solo después de la entrega</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. NOVEDADES RECIENTES -->
+    <section class="section" style="background:var(--color-surface);" aria-labelledby="novedades-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Blog y novedades</span>
+          <h2 class="section-title" id="novedades-title">
+            Lo último de <span class="text-gradient">Odin Tech</span>
+          </h2>
+          <p class="section-subtitle">Artículos, actualizaciones de productos y tendencias del sector.</p>
+        </div>
+
+        <!-- Layout editorial: 1 grande + 2 pequeños -->
+        <div class="editorial-grid">
+
+          <!-- Artículo principal -->
+          <article class="card card--article reveal" aria-label="Artículo destacado">
+            <div class="card__img-wrap" style="aspect-ratio:16/9;">
+              <div style="width:100%; height:100%; background:linear-gradient(135deg, var(--color-primary), var(--color-secondary)); display:flex; align-items:center; justify-content:center;">
+                <i data-lucide="brain-circuit" width="64" height="64" style="color:rgba(255,255,255,0.3);"></i>
+              </div>
+              <div class="card__img-overlay"></div>
+            </div>
+            <div class="card__body">
+              <div style="display:flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-3);">
+                <span class="badge badge-brand">IA Aplicada</span>
+                <span class="card__date">12 abr 2026</span>
+              </div>
+              <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-3);">
+                Cómo la inteligencia artificial está redefiniendo el análisis de datos empresariales en Chile
+              </h3>
+              <p style="color:var(--color-text-muted); font-size:var(--text-sm);">
+                Las empresas chilenas que adoptan IA no solo automatizan procesos — transforman la forma en que entienden su propio negocio.
+              </p>
+              <a href="novedades.html" class="btn btn-outline btn-sm" style="margin-top:var(--space-5);">Leer artículo</a>
+            </div>
+          </article>
+
+          <!-- 2 artículos secundarios -->
+          <div style="display:flex; flex-direction:column; gap:var(--space-6);">
+            <article class="card card--article reveal" aria-label="Artículo secundario">
+              <div class="card__body" style="padding:var(--space-6);">
+                <div style="display:flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-3);">
+                  <span class="badge badge-cyan">Producto</span>
+                  <span class="card__date">5 abr 2026</span>
+                </div>
+                <h3 style="font-size:var(--text-md); margin-bottom:var(--space-2);">
+                  Odin ERP v2.4: nuevas integraciones con SII y facturación electrónica
+                </h3>
+                <p style="color:var(--color-text-muted); font-size:var(--text-sm);">
+                  La actualización más esperada del año llega con soporte nativo para el nuevo formato XML del SII.
+                </p>
+                <a href="novedades.html" class="btn btn-outline btn-sm" style="margin-top:var(--space-4);">Leer más</a>
+              </div>
+            </article>
+
+            <article class="card card--article reveal" aria-label="Artículo secundario">
+              <div class="card__body" style="padding:var(--space-6);">
+                <div style="display:flex; align-items:center; gap:var(--space-3); margin-bottom:var(--space-3);">
+                  <span class="badge badge-purple">Formación</span>
+                  <span class="card__date">28 mar 2026</span>
+                </div>
+                <h3 style="font-size:var(--text-md); margin-bottom:var(--space-2);">
+                  5 habilidades digitales que todo equipo necesita en 2026
+                </h3>
+                <p style="color:var(--color-text-muted); font-size:var(--text-sm);">
+                  El mercado laboral cambió. Las empresas que invierten en formación tecnológica hoy son las que lideran mañana.
+                </p>
+                <a href="novedades.html" class="btn btn-outline btn-sm" style="margin-top:var(--space-4);">Leer más</a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <div class="text-center" style="margin-top:var(--space-10);">
+          <a href="novedades.html" class="btn btn-primary">Ver todas las novedades</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. TESTIMONIOS -->
+    <section class="section" aria-labelledby="testimonios-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Testimonios</span>
+          <h2 class="section-title" id="testimonios-title">
+            Lo que dicen <span class="text-gradient">nuestros clientes</span>
+          </h2>
+        </div>
+
+        <div style="max-width:680px; margin:0 auto;">
+          <div class="testimonial-card reveal" style="font-size:var(--text-md);">
+            <div style="display:flex; gap:var(--space-2); margin-bottom:var(--space-4);" aria-label="5 de 5 estrellas">
+              <i data-lucide="star" width="18" height="18" style="color:var(--color-grad-5); fill:var(--color-grad-5);"></i>
+              <i data-lucide="star" width="18" height="18" style="color:var(--color-grad-5); fill:var(--color-grad-5);"></i>
+              <i data-lucide="star" width="18" height="18" style="color:var(--color-grad-5); fill:var(--color-grad-5);"></i>
+              <i data-lucide="star" width="18" height="18" style="color:var(--color-grad-5); fill:var(--color-grad-5);"></i>
+              <i data-lucide="star" width="18" height="18" style="color:var(--color-grad-5); fill:var(--color-grad-5);"></i>
+            </div>
+            <p class="testimonial-card__text">
+              "Implementamos Odin ERP en nuestro local y la diferencia fue inmediata. Ahora vemos en tiempo real cuánto vendemos, qué ingredientes nos quedan y qué pedidos están pendientes — todo desde una sola pantalla. Antes eso nos tomaba horas de planillas; hoy lo tenemos al instante."
+            </p>
+            <div class="testimonial-card__author">
+              <img src="Logo_redim.webp" alt="Dreamland Coffee & Gelato" width="48" height="48" style="width:48px; height:48px; border-radius:50%; object-fit:cover; flex-shrink:0; border:2px solid var(--color-border);" loading="lazy">
+              <div>
+                <div class="testimonial-card__name">Dreamland Coffee &amp; Gelato</div>
+                <div class="testimonial-card__role">Cafetería &amp; Heladería · Cliente Odin ERP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. CTA FINAL -->
+    <section class="cta-banner" aria-labelledby="cta-title">
+      <div class="container cta-banner__content">
+        <h2 class="cta-banner__title" id="cta-title">
+          ¿Listo para que la tecnología<br>trabaje para ti?
+        </h2>
+        <p class="cta-banner__subtitle">
+          Cuéntanos tu desafío. En menos de 24 horas te proponemos un camino.
+        </p>
+        <div style="display:flex; gap:var(--space-4); justify-content:center; flex-wrap:wrap;">
+          <a href="contacto.html" class="btn btn-primary btn-lg" style="background:white; color:var(--color-primary);">
+            Hablar con el equipo
+            <i data-lucide="arrow-right" width="18" height="18"></i>
+          </a>
+          <a href="servicios.html" class="btn btn-secondary btn-lg">Ver servicios</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <img src="original_png.png" alt="Odin Tech" width="100" height="34">
+          <p>Tecnología que piensa contigo. Hacemos páginas web, aplicaciones a medida y software de gestión para pymes, emprendedores y familias en Chile.</p>
+          <div class="footer__social" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/odin_tech_ti" aria-label="Instagram" target="_blank" rel="noopener">
+              <i data-lucide="instagram" width="16" height="16"></i>
+            </a>
+            <a href="https://www.tiktok.com/@odin_tech_ti" aria-label="TikTok" target="_blank" rel="noopener">
+              <i data-lucide="tiktok" width="16" height="16"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Empresa</h4>
+          <ul class="footer__links">
+            <li><a href="nosotros.html">Quiénes somos</a></li>
+            <li><a href="novedades.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Productos</h4>
+          <ul class="footer__links">
+            <li><a href="productos.html">Odin ERP</a></li>
+            <li><a href="productos.html">Odin Runa</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <div class="footer__contact-item">
+            <i data-lucide="mail" width="14" height="14"></i>
+            <span>admin@odin-erp.cl</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="phone" width="14" height="14"></i>
+            <a href="https://wa.me/56936445396" target="_blank" rel="noopener">+56 9 3644 5396</a>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="map-pin" width="14" height="14"></i>
+            <span>Chile</span>
+          </div>
+          <div class="footer__contact-item">
+            <i data-lucide="clock" width="14" height="14"></i>
+            <span>Lun–Vie 9:00–19:00</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__legal">© 2026 Odin Tech · Todos los derechos reservados</p>
+        <p class="footer__legal">Hecho en Chile 🇨🇱</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <div class="whatsapp-float">
+    <span class="whatsapp-float__tooltip">¿Necesitas ayuda?</span>
+    <a href="https://wa.me/56936445396"
+       class="whatsapp-float__btn"
+       aria-label="Contactar por WhatsApp"
+       target="_blank"
+       rel="noopener">
+      <i data-lucide="message-circle" width="22" height="22"></i>
+    </a>
+  </div>
+
+  <!-- JS -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+
+</body>
+</html>
