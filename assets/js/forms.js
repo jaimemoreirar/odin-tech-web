@@ -308,8 +308,217 @@ function initNewsletterForm() {
   });
 }
 
+/* === VALIDACIÓN — formulario demo === */
+
+function validateDemoForm() {
+  let valid = true;
+
+  const rutEmpresa      = document.getElementById('demo-rut-empresa');
+  const nombreEmpresa   = document.getElementById('demo-nombre-empresa');
+  const giro            = document.getElementById('demo-giro');
+  const direccion       = document.getElementById('demo-direccion');
+  const comuna          = document.getElementById('demo-comuna');
+  const ciudad          = document.getElementById('demo-ciudad');
+  const telefonoEmpresa = document.getElementById('demo-telefono-empresa');
+  const rutAdmin        = document.getElementById('demo-rut-admin');
+  const nombreAdmin     = document.getElementById('demo-nombre-admin');
+  const email           = document.getElementById('demo-email');
+  const privacidad      = document.getElementById('demo-privacidad');
+
+  const fields = ['demo-rut-empresa','demo-nombre-empresa','demo-giro','demo-direccion','demo-comuna','demo-ciudad','demo-telefono-empresa','demo-rut-admin','demo-nombre-admin','demo-email','demo-privacidad'];
+  fields.forEach(clearError);
+
+  if (!rutEmpresa || !rutEmpresa.value.trim()) { setError('demo-rut-empresa', 'El RUT de la empresa es obligatorio.'); valid = false; }
+  else if (!/^\d{1,2}\.\d{3}\.\d{3}-[\dkK]$/.test(rutEmpresa.value.trim())) { setError('demo-rut-empresa', 'Formato inválido: 12.345.678-9'); valid = false; }
+
+  if (!nombreEmpresa || !nombreEmpresa.value.trim()) { setError('demo-nombre-empresa', 'El nombre del negocio es obligatorio.'); valid = false; }
+
+  if (!giro || !giro.value.trim()) { setError('demo-giro', 'El giro es obligatorio.'); valid = false; }
+
+  if (!direccion || !direccion.value.trim()) { setError('demo-direccion', 'La dirección es obligatoria.'); valid = false; }
+
+  if (!comuna || !comuna.value.trim()) { setError('demo-comuna', 'La comuna es obligatoria.'); valid = false; }
+
+  if (!ciudad || !ciudad.value.trim()) { setError('demo-ciudad', 'La ciudad es obligatoria.'); valid = false; }
+
+  if (!telefonoEmpresa || !telefonoEmpresa.value.trim()) { setError('demo-telefono-empresa', 'El teléfono es obligatorio.'); valid = false; }
+
+  if (!rutAdmin || !rutAdmin.value.trim()) { setError('demo-rut-admin', 'Tu RUT personal es obligatorio.'); valid = false; }
+  else if (!/^\d{1,2}\.\d{3}\.\d{3}-[\dkK]$/.test(rutAdmin.value.trim())) { setError('demo-rut-admin', 'Formato inválido: 12.345.678-9'); valid = false; }
+
+  if (!nombreAdmin || !nombreAdmin.value.trim()) { setError('demo-nombre-admin', 'Tu nombre es obligatorio.'); valid = false; }
+
+  if (!email || !email.value.trim()) { setError('demo-email', 'El correo electrónico es obligatorio.'); valid = false; }
+  else if (!EMAIL_RE.test(email.value.trim())) { setError('demo-email', 'Ingresa un correo electrónico válido.'); valid = false; }
+
+  if (privacidad && !privacidad.checked) { setError('demo-privacidad', 'Debes aceptar la política de privacidad.'); valid = false; }
+
+  return valid;
+}
+
+/* === ENVÍO — formulario demo === */
+
+function initDemoForm() {
+  const form = document.getElementById('demo-form');
+  const btn  = document.getElementById('demo-submit-btn');
+  if (!form) return;
+
+  form.querySelectorAll('input, textarea').forEach(field => {
+    field.addEventListener('input', () => {
+      if (field.id) clearError(field.id);
+      field.classList.remove('error');
+    });
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!validateDemoForm()) {
+      const firstError = form.querySelector('.error');
+      if (firstError) firstError.focus();
+      return;
+    }
+
+    setButtonLoading(btn, true);
+
+    const payload = {
+      rut_empresa:      document.getElementById('demo-rut-empresa')?.value.trim(),
+      nombre_empresa:   document.getElementById('demo-nombre-empresa')?.value.trim(),
+      giro:             document.getElementById('demo-giro')?.value.trim(),
+      direccion:        document.getElementById('demo-direccion')?.value.trim(),
+      comuna:           document.getElementById('demo-comuna')?.value.trim(),
+      ciudad:           document.getElementById('demo-ciudad')?.value.trim(),
+      telefono_empresa: document.getElementById('demo-telefono-empresa')?.value.trim(),
+      rut_admin:        document.getElementById('demo-rut-admin')?.value.trim(),
+      nombre_admin:     document.getElementById('demo-nombre-admin')?.value.trim(),
+      email:            document.getElementById('demo-email')?.value.trim(),
+    };
+
+    try {
+      const API_URL = 'https://n8n.odin-erp.cl/webhook/registro-demo';
+
+      const nombreAdmin = payload.nombre_admin;
+      const nombreEmpresa = payload.nombre_empresa;
+
+      const cuerpo = `<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background:#0f0f1a;font-family:'Segoe UI',Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#0f0f1a;padding:40px 16px;">
+    <tr><td align="center">
+      <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
+
+        <!-- HEADER -->
+        <tr><td style="background:linear-gradient(135deg,#6A1B9A 0%,#C2185B 60%,#E91E63 100%);border-radius:12px 12px 0 0;padding:36px 40px;text-align:center;">
+          <p style="margin:0 0 8px;font-size:22px;font-weight:700;color:#FFFFFF;letter-spacing:1px;">ODIN TECH</p>
+          <p style="margin:0;font-size:13px;color:rgba(255,255,255,0.75);letter-spacing:2px;text-transform:uppercase;">Tecnología que piensa contigo</p>
+        </td></tr>
+
+        <!-- BADGE -->
+        <tr><td style="background:#1A1A2E;padding:0 40px;">
+          <div style="margin-top:-1px;padding:10px 0;border-bottom:1px solid rgba(106,27,154,0.35);">
+            <span style="display:inline-block;background:rgba(0,229,255,0.12);border:1px solid rgba(0,229,255,0.3);color:#00E5FF;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;padding:4px 14px;border-radius:20px;">Nuevo registro — Trial 14 días</span>
+          </div>
+        </td></tr>
+
+        <!-- BODY -->
+        <tr><td style="background:#1A1A2E;padding:32px 40px;">
+          <p style="margin:0 0 24px;font-size:15px;color:#9E9E9E;line-height:1.6;">Se ha registrado un nuevo cliente solicitando trial de Odin ERP.</p>
+
+          <!-- DATOS NEGOCIO -->
+          <p style="margin:0 0 10px;font-size:12px;color:#9E9E9E;text-transform:uppercase;letter-spacing:1px;">Datos del negocio</p>
+          <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-bottom:24px;">
+            <tr style="border-bottom:1px solid rgba(106,27,154,0.25);">
+              <td style="padding:8px 0;color:#9E9E9E;font-size:12px;width:110px;text-transform:uppercase;">Empresa</td>
+              <td style="padding:8px 0;color:#FFFFFF;font-size:14px;font-weight:600;">${nombreEmpresa}</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(106,27,154,0.25);">
+              <td style="padding:8px 0;color:#9E9E9E;font-size:12px;text-transform:uppercase;">RUT</td>
+              <td style="padding:8px 0;color:#FFFFFF;font-size:14px;">${payload.rut_empresa}</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(106,27,154,0.25);">
+              <td style="padding:8px 0;color:#9E9E9E;font-size:12px;text-transform:uppercase;">Giro</td>
+              <td style="padding:8px 0;color:#FFFFFF;font-size:14px;">${payload.giro}</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(106,27,154,0.25);">
+              <td style="padding:8px 0;color:#9E9E9E;font-size:12px;text-transform:uppercase;">Dirección</td>
+              <td style="padding:8px 0;color:#FFFFFF;font-size:14px;">${payload.direccion}, ${payload.comuna}, ${payload.ciudad}</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 0;color:#9E9E9E;font-size:12px;text-transform:uppercase;">Teléfono</td>
+              <td style="padding:8px 0;color:#FFFFFF;font-size:14px;">${payload.telefono_empresa}</td>
+            </tr>
+          </table>
+
+          <!-- DATOS ADMIN -->
+          <p style="margin:0 0 10px;font-size:12px;color:#9E9E9E;text-transform:uppercase;letter-spacing:1px;">Cuenta de administrador</p>
+          <table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;margin-bottom:24px;">
+            <tr style="border-bottom:1px solid rgba(106,27,154,0.25);">
+              <td style="padding:8px 0;color:#9E9E9E;font-size:12px;width:110px;text-transform:uppercase;">Nombre</td>
+              <td style="padding:8px 0;color:#FFFFFF;font-size:14px;font-weight:600;">${nombreAdmin}</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(106,27,154,0.25);">
+              <td style="padding:8px 0;color:#9E9E9E;font-size:12px;text-transform:uppercase;">RUT</td>
+              <td style="padding:8px 0;color:#FFFFFF;font-size:14px;">${payload.rut_admin}</td>
+            </tr>
+            <tr>
+              <td style="padding:8px 0;color:#9E9E9E;font-size:12px;text-transform:uppercase;">Email</td>
+              <td style="padding:8px 0;"><a href="mailto:${payload.email}" style="color:#00E5FF;font-size:14px;text-decoration:none;">${payload.email}</a></td>
+            </tr>
+          </table>
+
+          <p style="margin:0;font-size:13px;color:#9E9E9E;font-style:italic;">Plan: Pro · Trial: 14 días · Onboarding: demo</p>
+        </td></tr>
+
+        <!-- FOOTER -->
+        <tr><td style="background:#212121;border-radius:0 0 12px 12px;padding:20px 40px;text-align:center;border-top:1px solid rgba(106,27,154,0.35);">
+          <p style="margin:0 0 4px;font-size:13px;font-weight:600;color:#FFFFFF;">Odin Tech</p>
+          <p style="margin:0;font-size:12px;color:#9E9E9E;">admin@odin-erp.cl · odin-erp.cl</p>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+
+      const res = await fetch(API_URL, {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify({
+          correo_usuario: payload.email,
+          asunto:         `Nuevo registro: ${nombreEmpresa} — Trial 14 días`,
+          cuerpo,
+          tipo:           'registro_demo',
+          datos:          payload,
+        }),
+      });
+
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      showFeedback(
+        'demo-feedback',
+        '¡Cuenta creada! Revisa tu correo para obtener tus credenciales de acceso.',
+        'success'
+      );
+      form.reset();
+
+    } catch (err) {
+      console.error('Error enviando registro:', err);
+      showFeedback(
+        'demo-feedback',
+        'Hubo un problema al crear tu cuenta. Por favor intenta de nuevo o escríbenos a admin@odin-erp.cl.',
+        'error'
+      );
+    } finally {
+      setButtonLoading(btn, false);
+    }
+  });
+}
+
 /* === INICIALIZACIÓN === */
 document.addEventListener('DOMContentLoaded', () => {
   initContactForm();
   initNewsletterForm();
+  initDemoForm();
 });
