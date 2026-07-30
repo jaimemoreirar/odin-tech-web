@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qué es un ERP y por qué tu negocio podría necesitar uno | Odin Tech</title>
+  <meta name="description" content="ERP suena a sigla técnica, pero es más simple de lo que parece. Acá te explicamos qué hace, cómo funciona y cuándo conviene.">
+  <meta name="author" content="Jaime — Odin Tech">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://odin-erp.cl/articulo-que-es-erp.html">
+  <meta property="og:type"        content="article">
+  <meta property="og:title"       content="Qué es un ERP y por qué tu negocio podría necesitar uno">
+  <meta property="og:description" content="ERP suena a sigla técnica, pero es más simple de lo que parece. Te explicamos qué hace.">
+  <meta property="og:image"       content="https://odin-erp.cl/assets/img/og-image.jpg">
+  <meta property="og:url"         content="https://odin-erp.cl/articulo-que-es-erp.html">
+  <meta property="og:locale"      content="es_CL">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Qué es un ERP y por qué tu negocio podría necesitar uno">
+  <meta name="twitter:description" content="ERP suena a sigla técnica, pero es más simple de lo que parece.">
+  <meta name="twitter:image"       content="https://odin-erp.cl/assets/img/og-image.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="apple-touch-icon"    href="/assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Qué es un ERP y por qué tu negocio podría necesitar uno",
+    "description": "ERP suena a sigla técnica, pero es más simple de lo que parece. Acá te explicamos qué hace, cómo funciona y cuándo conviene.",
+    "author": { "@type": "Person", "name": "Jaime", "worksFor": { "@type": "Organization", "name": "Odin Tech" } },
+    "publisher": { "@type": "Organization", "name": "Odin Tech", "url": "https://odin-erp.cl" },
+    "datePublished": "2026-07-29",
+    "dateModified": "2026-07-29",
+    "inLanguage": "es-CL",
+    "url": "https://odin-erp.cl/articulo-que-es-erp.html",
+    "keywords": ["que es un ERP", "sistema de gestion pymes Chile", "software para pymes Chile", "ERP para pequeños negocios", "Odin ERP", "control inventario ventas"]
+  }
+  </script>
+
+  <style>
+    .article-hero {
+      padding: var(--space-20) 0 var(--space-12);
+      background: linear-gradient(180deg, rgba(106,27,154,0.12) 0%, transparent 100%);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .article-hero__label {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      color: var(--color-primary-light);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: var(--space-4);
+    }
+    .article-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: var(--space-5);
+      max-width: 780px;
+    }
+    .article-hero__subtitle {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      max-width: 640px;
+      margin-bottom: var(--space-8);
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+    .article-meta__avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--gradient-brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--text-sm);
+      color: white;
+      flex-shrink: 0;
+    }
+    .article-meta__info { display: flex; flex-direction: column; gap: 2px; }
+    .article-meta__author { font-family: var(--font-display); font-size: var(--text-sm); font-weight: 600; }
+    .article-meta__details { font-size: var(--text-xs); color: var(--color-text-muted); }
+    .article-meta__sep { color: var(--color-border); }
+
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: var(--space-16);
+      align-items: start;
+    }
+    @media (max-width: 1024px) {
+      .article-layout { grid-template-columns: 1fr; }
+      .article-aside { display: none; }
+    }
+
+    .article-body { max-width: 720px; }
+    .article-body p {
+      font-size: var(--text-md);
+      line-height: 1.85;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-6);
+    }
+    .article-body p:last-child { margin-bottom: 0; }
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--color-text);
+      margin: var(--space-12) 0 var(--space-4);
+      padding-top: var(--space-4);
+      border-top: 1px solid var(--color-border);
+    }
+    .article-body blockquote {
+      border-left: 3px solid var(--color-primary-light);
+      padding: var(--space-4) var(--space-6);
+      background: rgba(106,27,154,0.08);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: var(--space-8) 0;
+    }
+    .article-body blockquote p {
+      font-size: var(--text-md);
+      font-style: italic;
+      color: var(--color-text);
+      margin-bottom: 0;
+    }
+    .article-separator {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--space-10) 0;
+    }
+
+    .highlight-box {
+      background: rgba(0,229,255,0.06);
+      border: 1px solid rgba(0,229,255,0.2);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin: var(--space-8) 0;
+    }
+    .highlight-box p {
+      font-size: var(--text-sm);
+      margin-bottom: 0;
+    }
+
+    .card-ejemplo {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin: var(--space-6) 0;
+    }
+    .card-ejemplo__title {
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: var(--space-3);
+    }
+    .card-ejemplo p {
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-3);
+    }
+    .card-ejemplo p:last-child { margin-bottom: 0; }
+
+    .article-cta {
+      background: linear-gradient(135deg, rgba(106,27,154,0.2), rgba(194,24,91,0.15));
+      border: 1px solid rgba(106,27,154,0.3);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      margin-top: var(--space-10);
+      text-align: center;
+    }
+    .article-cta p {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-5);
+    }
+
+    .article-aside { position: sticky; top: calc(var(--nav-height) + var(--space-8)); }
+    .aside-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin-bottom: var(--space-5);
+    }
+    .aside-card h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-4);
+    }
+    .aside-toc { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+    .aside-toc li a {
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+      line-height: 1.5;
+      display: block;
+      padding: var(--space-1) 0;
+    }
+    .aside-toc li a:hover { color: var(--color-text); }
+
+    .article-nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+      margin-top: var(--space-16);
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--color-border);
+    }
+    @media (max-width: 640px) { .article-nav { grid-template-columns: 1fr; } }
+    .article-nav__item {
+      padding: var(--space-5);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: border-color var(--transition-base), background var(--transition-base);
+    }
+    .article-nav__item:hover { border-color: rgba(106,27,154,0.5); background: rgba(106,27,154,0.05); }
+    .article-nav__dir { font-size: var(--text-xs); color: var(--color-text-muted); margin-bottom: var(--space-1); }
+    .article-nav__title { font-family: var(--font-display); font-size: var(--text-sm); font-weight: 600; line-height: 1.4; }
+    .article-nav__item--next { text-align: right; }
+
+    .pros-list {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-6) 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+    .pros-list li {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      padding-left: var(--space-7);
+      position: relative;
+    }
+    .pros-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Saltar al contenido</a>
+  <div class="page-loader" id="page-loader" aria-hidden="true"><div class="page-loader__spinner"></div></div>
+  <div class="custom-cursor" id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar navbar-animate" aria-label="Navegación principal">
+      <div class="navbar__inner">
+        <a href="index.html" class="navbar__logo" aria-label="Odin Tech — inicio">
+          <img src="original_png.png" alt="Odin Tech" width="120" height="40">
+        </a>
+        <ul class="navbar__nav" role="list">
+          <li><a href="nosotros.html"  class="navbar__link">Nosotros</a></li>
+          <li><a href="productos.html" class="navbar__link">Productos</a></li>
+          <li><a href="servicios.html" class="navbar__link">Servicios</a></li>
+          <li><a href="cursos.html"    class="navbar__link">Cursos</a></li>
+          <li><a href="novedades.html" class="navbar__link active">Novedades</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <a href="cotizador.html" class="btn btn-primary btn-sm">Cotizar</a>
+          <button class="navbar__hamburger" id="nav-hamburger" aria-expanded="false" aria-controls="nav-mobile-menu" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="navbar__overlay" id="nav-overlay" aria-hidden="true"></div>
+    <div class="navbar__mobile-menu" id="nav-mobile-menu" role="dialog" aria-label="Menú de navegación">
+      <ul role="list">
+        <li><a href="nosotros.html"  class="navbar__link">Nosotros</a></li>
+        <li><a href="productos.html" class="navbar__link">Productos</a></li>
+        <li><a href="servicios.html" class="navbar__link">Servicios</a></li>
+        <li><a href="cursos.html"    class="navbar__link">Cursos</a></li>
+        <li><a href="novedades.html" class="navbar__link active">Novedades</a></li>
+      </ul>
+      <a href="cotizador.html" class="btn btn-primary" style="margin-top:auto;">Cotizar</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="article-hero">
+      <div class="container">
+        <span class="article-hero__label">// Odin ERP · jul 2026</span>
+        <h1 class="article-hero__title">Qué es un ERP y por qué tu negocio podría necesitar uno</h1>
+        <p class="article-hero__subtitle">ERP suena a sigla técnica, pero el concepto es simple: un programa que junta todas las partes de tu negocio en un solo lugar para que no tengas que andar saltando entre Excel, cuadernos y la memoria.</p>
+        <div class="article-meta">
+          <div class="article-meta__avatar">J</div>
+          <div class="article-meta__info">
+            <span class="article-meta__author">Jaime</span>
+            <span class="article-meta__details">Fundador, Odin Tech</span>
+          </div>
+          <span class="article-meta__sep">·</span>
+          <span style="font-size:var(--text-xs); color:var(--color-text-muted);">5 min de lectura</span>
+          <span class="article-meta__sep">·</span>
+          <span class="badge badge-cyan">Odin ERP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUERPO -->
+    <section class="section">
+      <div class="container">
+        <div class="article-layout">
+
+          <article class="article-body reveal" aria-label="Artículo: Qué es un ERP y por qué tu negocio podría necesitar uno">
+
+            <p>Un ERP es un programa que centraliza la información de tu negocio. En vez de tener las ventas en Excel, el inventario en un cuaderno y los pedidos en tu cabeza, todo queda en un solo sistema que se actualiza solo.</p>
+
+            <p>Te pongo un ejemplo rápido.</p>
+
+            <div class="card-ejemplo">
+              <div class="card-ejemplo__title">Sin ERP</div>
+              <p>Llega un cliente, pide un producto, revisas tu stock en Excel, ves que hay, haces la venta, anotas en otro lado, al final del día sumas todo. Si te equivocaste en un número, el inventario queda mal y no te das cuenta hasta que alguien pide algo que no tienes.</p>
+            </div>
+
+            <div class="card-ejemplo" style="border-color:rgba(0,229,255,0.2); background:rgba(0,229,255,0.04);">
+              <div class="card-ejemplo__title">Con ERP</div>
+              <p>Llega un cliente, haces la venta en el sistema. El stock se descuenta solo. El pedido queda registrado. Los números están actualizados en tiempo real. Si alguien más está viendo el inventario al mismo tiempo, ve la misma información.</p>
+            </div>
+
+            <p>No es magia. Es tener la información ordenada y al alcance de la mano sin depender de archivos sueltos ni papeles.</p>
+
+            <h2 id="problema">El problema que resuelve</h2>
+
+            <p>Cuando un negocio chico empieza, basta con la cabeza del dueño y un cuaderno. Después pasan a Excel, que es mejor. Pero llega un punto en que Excel empieza a quedarse corto:</p>
+
+            <ul class="pros-list">
+              <li>Los archivos se multiplican. Tienes uno para ventas, otro para compras, otro para clientes. Y no hablan entre sí.</li>
+              <li>Alguien se equivoca en una celda y todo el resto se desarma.</li>
+              <li>No puedes ver en tiempo real cuánto stock te queda sin pedirle a alguien que revise.</li>
+              <li>Vendes por un lado, actualizas inventario por otro, y los números nunca calzan del todo.</li>
+            </ul>
+
+            <p>Un ERP resuelve eso juntando todo en un solo lugar. Cuando vendes, el inventario se actualiza. Cuando compras, el sistema sabe que entró mercadería. Cuando quieres saber cómo va el mes, miras el reporte y listo.</p>
+
+            <h2 id="inventado">Esto no es invento de las grandes empresas</h2>
+
+            <p>Hasta hace unos años los ERP eran cosa de empresas grandes con presupuestos grandes. Costaban millones, requerían instalación, servidores, consultores. Para un negocio chico no tenía sentido.</p>
+
+            <p>Hoy eso cambió. Existen sistemas diseñados para pymes, que funcionan en el navegador, sin instalar nada, con precios accesibles. Odin ERP es uno de esos. No necesitas un departamento de TI. Lo abres, te registras un rato para probarlo y lo usas desde cualquier celular o computador.</p>
+
+            <h2 id="senales">¿Cómo saber si te conviene?</h2>
+
+            <p>Si te identificas con alguna de estas situaciones, puede que sea momento de considerar uno:</p>
+
+            <ul class="pros-list">
+              <li><strong>Pasas más tiempo ordenando números que vendiendo.</strong> Si cada fin de semana tienes que cuadrar cuentas y siempre queda algo suelto, el sistema te ahorra ese tiempo.</li>
+              <li><strong>No sabes cuánto vendiste ayer sin revisar tres archivos.</strong> Con un ERP miras un número y lo sabes.</li>
+              <li><strong>Se te pierden pedidos.</strong> Un cliente pide algo, se te olvida, él se enoja, tú quedas mal. El ERP registra cada pedido y no se te olvida nada.</li>
+              <li><strong>Compraste cosas que no necesitabas porque creías que no tenías stock.</strong> Pasa seguido. Con inventario actualizado en tiempo real, compras solo lo que falta.</li>
+              <li><strong>Quieres saber qué producto se vende más.</strong> En Excel tendrías que hacer sumas manuales o tablas dinámicas. En el sistema ves un gráfico al tiro.</li>
+            </ul>
+
+            <div class="highlight-box">
+              <p><strong>Ejemplo real:</strong> En Dreamland Coffee & Gelato usan Odin ERP para controlar ventas, pedidos e inventario. Las estadísticas las ven en tiempo real. Antes tenían que hacer resúmenes a fin de mes, ahora miran la pantalla y saben al instante qué está funcionando.</p>
+            </div>
+
+            <h2 id="da-miedo">El "y si es muy complicado"</h2>
+
+            <p>Esta es la pregunta que más escuchamos: "suena útil, pero mi papá/hermano/empleado no le va a agarrar el paso".</p>
+
+            <p>La respuesta es que un ERP bien diseñado no es más difícil que usar una red social o una aplicación de banco. Odin ERP está pensado para personas que pasan el día trabajando, no para expertos en computación. Los botones son pocos y están donde uno espera. Además tienes soporte directo por WhatsApp si algo no queda claro.</p>
+
+            <h2 id="probar">¿Y cuánto cuesta probarlo?</h2>
+
+            <p>Nada. Puedes crear una cuenta de prueba gratis que funciona por 14 días. Altiro te llegan las credenciales al correo y empiezas a usar el sistema sin dar ningún dato de pago. Si funciona para tu negocio, después ves los planes. Si no, no pasa nada.</p>
+
+            <p>O si prefieres conversarlo primero, escríbenos por WhatsApp o al formulario de contacto y te contamos bien cómo funciona.</p>
+
+            <div class="article-cta">
+              <p>¿Quieres ver cómo funciona Odin ERP en tu negocio? Crea una cuenta de prueba gratis o cuéntanos lo que necesitas.</p>
+              <div style="display:flex; gap:var(--space-3); justify-content:center; flex-wrap:wrap;">
+                <a href="demo.html" class="btn btn-primary">Probar Odin ERP gratis →</a>
+                <a href="contacto.html" class="btn btn-secondary btn-ghost">Consultar por WhatsApp</a>
+              </div>
+            </div>
+
+            <!-- Navegación -->
+            <nav class="article-nav" aria-label="Navegación entre artículos">
+              <a href="articulo-web-vs-instagram.html" class="article-nav__item">
+                <div class="article-nav__dir">← Anterior</div>
+                <div class="article-nav__title">¿Necesito página web o me basta con Instagram?</div>
+              </a>
+              <a href="novedades.html" class="article-nav__item article-nav__item--next">
+                <div class="article-nav__dir">Ver todos →</div>
+                <div class="article-nav__title">Todos los artículos</div>
+              </a>
+            </nav>
+
+          </article>
+
+          <!-- Sidebar -->
+          <aside class="article-aside" aria-label="Sidebar del artículo">
+
+            <div class="aside-card">
+              <h4>En este artículo</h4>
+              <ul class="aside-toc">
+                <li><a href="#problema">El problema que resuelve</a></li>
+                <li><a href="#inventado">No es invento de grandes empresas</a></li>
+                <li><a href="#senales">¿Cómo saber si te conviene?</a></li>
+                <li><a href="#da-miedo">El "y si es muy complicado"</a></li>
+                <li><a href="#probar">¿Cuánto cuesta probarlo?</a></li>
+              </ul>
+            </div>
+
+            <div class="aside-card">
+              <h4>Artículos relacionados</h4>
+              <ul class="aside-toc">
+                <li><a href="articulo-senales-excel.html">5 señales de que tu negocio necesita algo mejor que Excel</a></li>
+                <li><a href="articulo-web-vs-instagram.html">¿Necesito página web o me basta con Instagram?</a></li>
+              </ul>
+            </div>
+
+            <div class="aside-card" style="background:linear-gradient(135deg,rgba(0,229,255,0.1),rgba(106,27,154,0.1));">
+              <h4>Prueba Odin ERP gratis</h4>
+              <p style="font-size:var(--text-xs); color:var(--color-text-muted); margin-bottom:var(--space-4); line-height:1.6;">14 días de prueba. Sin tarjeta. Recibe tus credenciales al correo al instante.</p>
+              <a href="demo.html" class="btn btn-primary btn-sm" style="width:100%; text-align:center;">Crear cuenta gratis</a>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="original_png.png" alt="Odin Tech" width="100" height="34">
+          <p>Tecnología que piensa contigo. Hacemos páginas web, aplicaciones a medida y software de gestión para pymes, emprendedores y familias en Chile.</p>
+          <div class="footer__social" aria-label="Redes sociales">
+            <a href="https://www.instagram.com/odin_tech_ti" aria-label="Instagram" target="_blank" rel="noopener"><i data-lucide="instagram" width="16" height="16"></i></a><a href="https://www.tiktok.com/@odin_tech_ti" aria-label="TikTok" target="_blank" rel="noopener"><i data-lucide="tiktok" width="16" height="16"></i></a><a href="https://x.com/odin_tech_ti" aria-label="X / Twitter" target="_blank" rel="noopener"><i data-lucide="twitter" width="16" height="16"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Empresa</h4>
+          <ul class="footer__links">
+            <li><a href="nosotros.html">Quiénes somos</a></li>
+            <li><a href="novedades.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Productos</h4>
+          <ul class="footer__links">
+            <li><a href="productos.html">Odin ERP</a></li>
+            <li><a href="productos.html">Odin Runa</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contacto</h4>
+          <div class="footer__contact-item"><i data-lucide="mail" width="14" height="14"></i><span>admin@odin-erp.cl</span></div>
+          <div class="footer__contact-item"><i data-lucide="phone" width="14" height="14"></i><a href="https://wa.me/56936445396" target="_blank" rel="noopener">+56 9 3644 5396</a></div>
+          <div class="footer__contact-item"><i data-lucide="map-pin" width="14" height="14"></i><span>Chile</span></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__legal">&copy; 2026 Odin Tech · Todos los derechos reservados</p>
+        <p class="footer__legal">Hecho en Chile 🇨🇱</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="whatsapp-float">
+    <span class="whatsapp-float__tooltip">¿Necesitas ayuda?</span>
+    <a href="https://wa.me/56936445396" class="whatsapp-float__btn" aria-label="Contactar por WhatsApp" target="_blank" rel="noopener">
+      <i data-lucide="message-circle" width="22" height="22"></i>
+    </a>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/animations.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+</body>
+</html>
